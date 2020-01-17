@@ -15,16 +15,18 @@
     <!-- fontAwesome字体图标库 -->
     <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet" asp-append-version="true" />
 
+    <!-- 多标签样式 -->
+
 
     <!-- 皮肤样式 -->
     <!--头部导航样式-->
-    <link rel="stylesheet" href="./static/css/skin1/top.css" />
-
+    <link rel="stylesheet" href="./static/css/skin1/hj-top.css" />
+    <link rel="stylesheet" href="./static/css/skin1/hj-content.css" />
 </head>
 
 <body>
     <!-- 头部导航 -->
-    <div class="hj-nav-bar navbar navbar-fixed-top">
+    <div class="hj-nav-bar navbar">
         <div class="page-header-inner">
             <div class="page-logo">
                 <span class="hj-system-name">华景乐游系统</span>
@@ -63,10 +65,24 @@
             </div>
         </div>
     </div>
-    <!-- 左侧菜单 -->
+    <!-- 主题内容 -->
+    <div class="page-content-wrapper">
+        <!-- 左侧菜单 -->
 
 
-    <!-- iframe内容框(动态添加) -->
+        <!-- 右侧iframe内容 -->
+        <div class="page-content" style="position:relative;">
+            <div class="row" id="myTab">
+                <div class="col-md-12">
+                    <div class="nth-tabs" id="editor-tabs"></div>
+                    <!--使用时只需此标签，class固定,id自定义-->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<!--bootstrap核心js-->
+<script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
 </html>
