@@ -15,12 +15,14 @@
     <!-- fontAwesome字体图标库 -->
     <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet" asp-append-version="true" />
 
-    <!-- 多标签样式 -->
+    <!-- 下拉选择 -->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-select/bootstrap-select.css" />
 
 
     <!-- 皮肤样式 -->
     <!--头部导航样式-->
     <link rel="stylesheet" href="./static/css/skin1/hj-top.css" />
+    <!-- iframe样式 -->
     <link rel="stylesheet" href="./static/css/skin1/hj-content.css" />
 </head>
 
@@ -51,12 +53,12 @@
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
                                 <a data-target="#divEditPwd" data-toggle="modal">
-                                    <i class="icon-lock"></i>
+                                    <i class="icon-lock"></i> 修改密码
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <i class="fa fa-sign-out"></i>
+                                    <i class="fa fa-sign-out"></i> 退出
                                 </a>
                             </li>
                         </ul>
@@ -69,12 +71,43 @@
     <div class="page-content-wrapper">
         <!-- 左侧菜单 -->
 
+        <div class="page-sidebar-wrapper" style="display: block;position:absolute;top:0;z-index: 99;">
+            <div class="page-sidebar-custom offset256" style="width: 256px;">
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 403px;">
+                    <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="false" data-slide-speed="1" data-height="403" data-initialized="1" style="overflow: hidden; width: auto; height: 403px;">
+
+                        <li class="nav-item nav-root open" data-id="AA05" data-text="参数选项管理">
+                            <a class="nav-link nav-toggle">
+                                <i class="fa fa-codepen"></i>
+                                <span class="title">参数选项管理</span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu" style="display: block;">
+                                <li class="nav-item" data-id data-text="规格选项类型" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">规格选项类型</span></a></li>
+                                <li class="nav-item" data-id="AA0510" data-text="规格选项明细" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">规格选项明细</span></a></li>
+                                <li class="nav-item" data-id="AA0515" data-text="平台配置类型" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">平台配置类型</span></a></li>
+                                <li class="nav-item" data-id="AA0520" data-text="平台配置选项" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">平台配置选项</span></a></li>
+                                <li class="nav-item" data-id="AA0525" data-text="企业配置类型" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">企业配置类型</span></a></li>
+                                <li class="nav-item" data-id="AA0530" data-text="企业配置选项" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">企业配置选项</span></a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <div class="slimScrollBar" style="background: rgb(187, 187, 187); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 196.146px;"></div>
+                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(234, 234, 234); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- 右侧iframe内容 -->
         <div class="page-content" style="position:relative;">
             <div class="row" id="myTab">
                 <div class="col-md-12">
-                    <div class="nth-tabs" id="editor-tabs"></div>
+                    <div class="nth-tabs" id="editor-tabs">
+
+                    </div>
                     <!--使用时只需此标签，class固定,id自定义-->
                 </div>
             </div>
@@ -82,8 +115,23 @@
     </div>
 </body>
 
-<!--bootstrap核心js-->
+<!--jquery-->
 <script src="./static/plugin/jquery/jquery-3.4.0.min.js"></script>
-<script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<!--bootstrap核心js-->
+<!-- <script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script> -->
+<script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+<!-- 多标签js -->
+<script src="./static/plugin/jquery.scrollbar/jquery.scrollbar.js"></script>
+<script src="./static/plugin/nth.tabs/js/nth.tabs.min.js"></script>
+
+<!-- 公共js -->
+<script src="./static/js/hj-common.js"></script>
+
+
+
+
+<script>
+</script>
+
 
 </html>

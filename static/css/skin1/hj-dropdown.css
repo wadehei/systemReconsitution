@@ -1,0 +1,58 @@
+/*下拉框*/
+
+.dropdown-menu li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.dropdown-menu {
+    position: absolute;
+    height: auto;
+    outline: none;
+    list-style-type: none;
+    padding: 4px 0;
+    margin: 0;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    background-clip: padding-box;
+}
+
+.dropdown-menu li {
+    height: 32px;
+    line-height: 22px;
+    padding: 5px 12px;
+    margin: 0;
+    clear: both;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .65);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.dropdown-menu li a {
+    padding: 0;
+    line-height: 22px !important;
+    background-color: transparent !important;
+}
+
+.dropdown-menu li i {
+    min-width: 12px;
+    margin-right: 8px;
+    display: inline-block;
+    font-style: normal;
+    vertical-align: -.125em;
+    text-align: center;
+    text-transform: none;
+    line-height: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.dropdown-menu li:hover {
+    background-color: #e6f7ff;
+}

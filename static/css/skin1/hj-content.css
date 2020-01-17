@@ -1,0 +1,41 @@
+/* 多标签样式*/
+
+@import "../../plugin/nth.tabs/css/nth.tabs.css";
+@import "../../css/skin1/hj-nth-tabs.css";
+.page-content-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.page-content-wrapper .page-content {
+    transition: all .2s;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-left: 256px;
+}
+
+
+/* .hj-nav-bar-fixed .page-container {
+    margin-top: 65px;
+} */
+
+
+/* .page-content-wrapper .page-content.offset80 {
+    margin-left: 80px !important;
+}
+
+.page-content-wrapper .page-content.offset256 {
+    margin-left: 256px !important;
+}
+
+.page-sidebar-custom.navbar-collapse.collapse.offset256 {
+    display: block !important;
+} */

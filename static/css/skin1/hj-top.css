@@ -1,3 +1,9 @@
+@import "./hj-dropdown.css";
+body a {
+    text-decoration: none;
+}
+
+
 /*头部导航*/
 
 .hj-nav-bar.navbar {
@@ -8,6 +14,7 @@
     box-shadow: 0 1px 10px 0 rgba(50, 50, 50, .2);
     box-shadow: 0 1px 10px 0 rgba(50, 50, 50, .2);
     box-shadow: 0 1px 10px 0 rgba(50, 50, 50, .2);
+    z-index: 9;
 }
 
 
@@ -17,7 +24,7 @@
     height: 65px;
     line-height: 65px;
     position: absolute;
-    right: 0;
+    right: 20px;
     top: 0;
     min-width: 400px;
 }
@@ -69,15 +76,42 @@
 
 .hj-menu li {
     height: 100%;
-    line-height: 65px;
+}
+
+.hj-menu li>a {
+    display: inline;
+    padding: 0;
+    position: static;
+}
+
+.hj-menu .icon-question {
+    line-height: 48px;
+}
+
+.hj-menu .dropdown-toggle {
+    min-width: 160px;
+    padding-left: 0;
+}
+
+.hj-menu .icon-refresh {
+    line-height: 47px;
 }
 
 .hj-menu li a {
-    padding-top: 15px;
     line-height: 35px;
     height: 100%;
     padding-left: 8px;
     padding-right: 8px;
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.hj-menu li a:focus,
+.hj-menu li a:hover {
+    border: 0 !important;
+    text-decoration: none;
 }
 
 i.antd-pro-components-global-header-index-trigger {
@@ -95,15 +129,6 @@ i.antd-pro-components-global-header-index-trigger {
     box-shadow: 0 1px 10px 0 rgba(50, 50, 50, .2);
     box-shadow: 0 1px 10px 0 rgba(50, 50, 50, .2);
     box-shadow: 0 1px 10px 0 rgba(50, 50, 50, .2);
-}
-
-.hj-nav-bar-fixed .page-container {
-    margin-top: 65px;
-}
-
-.page-content-wrapper .page-content {
-    margin-left: 256px;
-    transition: all .2s
 }
 
 .hj-nav-bar.navbar .page-logo {
@@ -131,7 +156,7 @@ i.antd-pro-components-global-header-index-trigger {
 }
 
 .hj-nav-bar.navbar .hj-menu .navbar-nav>li.dropdown-user .dropdown-menu>li>a i {
-    vertical-align: middle
+    vertical-align: 0
 }
 
 .hj-nav-bar.navbar .page-logo .hj-system-name {
@@ -139,18 +164,6 @@ i.antd-pro-components-global-header-index-trigger {
     white-space: nowrap;
     font-size: 18px;
     color: #fff
-}
-
-.page-content-wrapper .page-content.offset80 {
-    margin-left: 80px !important;
-}
-
-.page-content-wrapper .page-content.offset256 {
-    margin-left: 256px !important;
-}
-
-.page-sidebar-custom.navbar-collapse.collapse.offset256 {
-    display: block !important;
 }
 
 .hj-nav-bar.navbar .page-logo.offset256 .hj-system-name {

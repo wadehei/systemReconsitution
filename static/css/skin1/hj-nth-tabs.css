@@ -1,0 +1,120 @@
+/*标签页*/
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+    position: relative;
+    display: block;
+}
+
+.nth-tabs .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.nav-tabs>li>a,
+.nav-pills>li>a {
+    font-size: 14px;
+}
+
+.page-content .nav-tabs {
+    border-bottom: 0 !important;
+}
+
+.page-content .nth-tabs {
+    border-top: 0 !important;
+}
+
+.nth-tabs .content-tabs {
+    margin-top: 2px;
+    line-height: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.tabbable-line>.nav-tabs>li.active {
+    border-bottom: 4px solid #1890ff;
+}
+
+.tabbable-line>.nav-tabs>li.open,
+.tabbable-line>.nav-tabs>li:hover {
+    border-bottom: 4px solid #1890ff;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+#myTab {
+    position: relative !important;
+}
+
+#editor-tabs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+
+#editor-tabs .tab-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#editor-tabs .tab-content>div {
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+#editor-tabs .page-tabs {
+    width: 100%;
+    left: 0
+}
+
+.btn-group>.dropdown-menu:before,
+.dropdown-toggle>.dropdown-menu:before,
+.dropdown>.dropdown-menu:before {
+    left: 145px;
+}
+
+.btn-group>.dropdown-menu:after,
+.dropdown-toggle>.dropdown-menu:after,
+.dropdown>.dropdown-menu:after {
+    left: 145px;
+}
+
+#editor-tabs .dropdown-menu {
+    left: -135px;
+}
+
+#myTab {
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    margin: 0px;
+    z-index: 1;
+    box-sizing: 0;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: white;
+}
+
+#myTab>div {
+    width: 100%;
+    height: 100%
+}
