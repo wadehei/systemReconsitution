@@ -83,12 +83,12 @@
                                 <span class="arrow open"></span>
                             </a>
                             <ul class="sub-menu" style="display: block;">
-                                <li class="nav-item" data-id data-text="规格选项类型" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">规格选项类型</span></a></li>
-                                <li class="nav-item" data-id="AA0510" data-text="规格选项明细" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">规格选项明细</span></a></li>
-                                <li class="nav-item" data-id="AA0515" data-text="平台配置类型" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">平台配置类型</span></a></li>
-                                <li class="nav-item" data-id="AA0520" data-text="平台配置选项" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">平台配置选项</span></a></li>
-                                <li class="nav-item" data-id="AA0525" data-text="企业配置类型" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">企业配置类型</span></a></li>
-                                <li class="nav-item" data-id="AA0530" data-text="企业配置选项" data-url="static/plugin/nth-tabs/demo.html"><a class="nav-link "><i class=""></i><span class="title">企业配置选项</span></a></li>
+                                <li class="nav-item" data-id data-text="规格选项类型" data-url="components.html"><a class="nav-link "><i class=""></i><span class="title">规格选项类型</span></a></li>
+                                <li class="nav-item" data-id="AA0510" data-text="规格选项明细" data-url="components.html"><a class="nav-link "><i class=""></i><span class="title">规格选项明细</span></a></li>
+                                <li class="nav-item" data-id="AA0515" data-text="平台配置类型" data-url="components.html"><a class="nav-link "><i class=""></i><span class="title">平台配置类型</span></a></li>
+                                <li class="nav-item" data-id="AA0520" data-text="平台配置选项" data-url="components.html"><a class="nav-link "><i class=""></i><span class="title">平台配置选项</span></a></li>
+                                <li class="nav-item" data-id="AA0525" data-text="企业配置类型" data-url="components.html"><a class="nav-link "><i class=""></i><span class="title">企业配置类型</span></a></li>
+                                <li class="nav-item" data-id="AA0530" data-text="企业配置选项" data-url="components.html"><a class="nav-link "><i class=""></i><span class="title">企业配置选项</span></a></li>
                             </ul>
                         </li>
 
@@ -100,17 +100,22 @@
         </div>
 
 
-
         <!-- 右侧iframe内容 -->
         <div class="page-content" style="position:relative;">
             <div class="row" id="myTab">
-                <div class="col-md-12">
+                <div class="">
+                    <!--多标签，使用时只需此标签，class固定,id自定义-->
                     <div class="nth-tabs" id="editor-tabs">
 
                     </div>
-                    <!--使用时只需此标签，class固定,id自定义-->
+                    <!-- 面包屑 -->
+                    <ul class="breadcrumb">
+                        <li class="li-before-content"><span class="prePage">参数选项管理</span></li>
+                        <li class="li-before-content"><span class="currentPage">平台配置类型</span></li>
+                    </ul>
                 </div>
             </div>
+
         </div>
     </div>
 </body>

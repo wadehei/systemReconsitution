@@ -11,11 +11,17 @@
     position: relative;
     display: block;
     padding: 10px 15px;
+    border-bottom: 0;
+    transition-property: background-color;
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    -moz-transition-property: background-color;
 }
 
 .nav-tabs>li>a,
 .nav-pills>li>a {
     font-size: 14px;
+    text-decoration: none;
 }
 
 .page-content .nav-tabs {
@@ -27,7 +33,7 @@
 }
 
 .nth-tabs .content-tabs {
-    margin-top: 2px;
+    margin-top: 0;
     line-height: 20px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -73,6 +79,8 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    padding-top: 54px !important;
+    background-color: #f2f2f2;
 }
 
 #editor-tabs .tab-content>div {
