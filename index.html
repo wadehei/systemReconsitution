@@ -5,10 +5,68 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+
+    <!-- 自定义字体图标 -->
+    <link rel="stylesheet" href="./static/fonts/hj-icon-1/hj-icon1.css" />
+
+    <!-- fontAwesome字体图标库 -->
+    <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet" asp-append-version="true" />
+
+
+    <!-- 皮肤样式 -->
+    <!--头部导航样式-->
+    <link rel="stylesheet" href="./static/css/skin1/top.css" />
+
 </head>
 
+<body>
+    <!-- 头部导航 -->
+    <div class="hj-nav-bar navbar navbar-fixed-top">
+        <div class="page-header-inner">
+            <div class="page-logo">
+                <span class="hj-system-name">华景乐游系统</span>
+            </div>
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                <span></span>
+            </a>
+            <div class="hj-menu">
+                <ul class="nav navbar-nav">
+                    <li class="topRefresh">
+                        <a href="javascript:void(0)"><i class="hj-font-1 icon-refresh"></i></a>
+                    </li>
+                    <li class="topHelp">
+                        <a href="javascript:void(0)"><i class="hj-font-1 icon-question"></i></a>
+                    </li>
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="fa fa-user"></i>
+                            <span class="username username-hide-on-mobile"> 管理员 </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li>
+                                <a data-target="#divEditPwd" data-toggle="modal">
+                                    <i class="icon-lock"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-sign-out"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 左侧菜单 -->
 
-</script>
+
+    <!-- iframe内容框(动态添加) -->
 </body>
 
 </html>
