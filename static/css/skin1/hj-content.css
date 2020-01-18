@@ -3,6 +3,8 @@
 @import "../../plugin/nth.tabs/css/nth.tabs.css";
 @import "../../css/skin1/hj-nth-tabs.css";
 @import "../../css/skin1/hj-breadcrumb.css";
+@import "../../css/skin1/hj-input.css";
+@import "../../css/skin1/hj-button.css";
 .page-content-wrapper {
     width: 100%;
     height: 100%;
