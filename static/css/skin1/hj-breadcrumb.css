@@ -1,18 +1,21 @@
 .breadcrumb {
-    margin-bottom: 15px;
-    height: 35px;
+    height: 32px;
     border-bottom: 1px solid #e7ecf1;
-    line-height: 9px;
+    line-height: 7px;
     background-color: #fff;
     margin-bottom: 20px;
     z-index: 999;
     width: 100%;
-    margin-top: 42px;
+    margin-top: 38px;
     position: absolute;
 }
 
 .breadcrumb span {
     font-size: 14px;
+    color: #6e84a3;
+}
+.breadcrumb .currentPage{
+    color: #2c7be5;
 }
 
 .breadcrumb>li+li:before {

@@ -36,12 +36,42 @@ $(function() {
 
                 li.removeClass('li-active');
                 $(this).addClass('li-active');
+                /*
+                生成路由
+                 */
+                concatRouter($this);
 
                 // countFormQuery() //js控制css样式,函数在~/js/common.js内部设置
                 // countCustomDetail() //js控制css样式,函数在~/js/common.js内部设置
             }
         }
     });
+
+    // 根据页面找寻菜单的路径并在面包屑中显示
+    function concatRouter(nav){
+        var $nav = nav;
+        var array = [];
+        var title = nav.data("text");
+        array.push(title);
+        var parents = $nav.parents("li");
+        while(parents.length > 0){
+            parents = parents.parents("li");
+            var text = parents.data("text");
+            array.push(text)
+        }
+        var arReverse = array.reverse();
+        var html = '<li class="li-before-content"><span class="prePage">参数选项管理</span></li> <li class="li-before-content"><span class="currentPage">平台配置类型</span></li>'
+        for(var i = 0; i < arReverse.length;i++){
+            var routerText = arReverse[i];
+            if(i == (arReverse.length - 1)){
+                html += '<li class="li-before-content"><span class="currentPage">'+routerText+'</span></li>'
+            }else{
+                html += '<li class="li-before-content"><span class="prePage">'+routerText+'</span></li>'
+            }
+
+        }
+        $(".breadcrumb").html(html);
+    }
 
     // 根据路径和id加载对应的iframe页面
     function loadIframe(id, url) {

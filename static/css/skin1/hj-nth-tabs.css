@@ -26,6 +26,10 @@
 
 .page-content .nav-tabs {
     border-bottom: 0 !important;
+    background-color: #f7fafc;
+}
+.nth-tabs .content-tabs-container,.nth-tabs .roll-nav,.page-content .nav-tabs,.nth-tabs .page-tabs{
+    height: 38px;
 }
 
 .page-content .nth-tabs {
@@ -80,7 +84,7 @@
     height: 100%;
     width: 100%;
     padding-top: 54px !important;
-    background-color: #f2f2f2;
+    background-color: #f2f6f9;
 }
 
 #editor-tabs .tab-content>div {
@@ -115,7 +119,6 @@
     position: absolute;
     margin: 0px;
     z-index: 1;
-    box-sizing: 0;
     width: 100%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
