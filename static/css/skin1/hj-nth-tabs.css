@@ -44,6 +44,16 @@
     -moz-box-sizing: border-box;
 }
 
+.nth-tabs .fa:before{
+    color: #95aac9;
+    vertical-align: 1px;
+
+}
+.nth-tabs a{
+    border-color: #e9eef5;
+    background-color: #f7fafc !important;
+}
+
 .tabbable-line>.nav-tabs>li.active {
     border-bottom: 4px solid #1890ff;
 }
