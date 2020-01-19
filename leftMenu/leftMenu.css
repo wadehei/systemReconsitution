@@ -58,7 +58,7 @@ html, body {
 
 .hj_menu_container .menu_one .menu_item:hover {
     border-left: 4px solid #2c7be5;
-    background-color: rgba(44, 123, 229, 0.2);
+    background-color: #f0f6fd;
     color: #2c7be5;
 }
 
@@ -95,7 +95,7 @@ html, body {
 
 .hj_menu_container .menu_one .active_three {
     border-left: 4px solid #2c7be5;
-    background-color: rgba(44, 123, 229, 0.2);
+    background-color: #f0f6fd;
     color: #2c7be5;
 }
 
