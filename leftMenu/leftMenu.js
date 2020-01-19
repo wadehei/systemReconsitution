@@ -13,19 +13,19 @@ $(function () {
         var currMenuLevel = $this.attr("data-level");
         // 当前菜单是否展开
         var currMenuBool = Number($this.attr("data-bool"));
-        // 当前为二级菜单时
+        // 当前为一级菜单时
         if (currMenuLevel == 1) {
             if (currMenuBool == 1) {
                 packTwo($this, currMenuBool);
                 // 箭头向下
-                arrowsDown($this, currMenuLevel, currMenuChild);
+                arrowsDown($this, currMenuLevel, currMenuChild, currMenuBool);
             } else if (currMenuBool == 0) {
                 spreadTwo($this, currMenuBool);
                 // 箭头向上
                 arrowsUp($this, currMenuLevel, currMenuChild);
             }
         }
-        // 当前为三级菜单时
+        // 当前为二级菜单时
         else if (currMenuLevel == 2) {
             if (currMenuBool == 1) {
                 packThree($this, currMenuBool);
@@ -36,17 +36,57 @@ $(function () {
                 // 箭头向上
                 arrowsUp($this, currMenuLevel, currMenuChild);
             }
+        } else if (currMenuLevel == 3) {
+            $this.addClass("active_three");
+            $this.parent().siblings(".menu_three").children(".menu_item").removeClass("active_three");
+            arrowsUp($this, currMenuLevel, currMenuChild);
         }
     });
     // 箭头向上动画
     function arrowsUp($this, currMenuLevel, currMenuChild) {
-        if (currMenuChild > 0) {
-            $this.children(".menu_arrows").removeClass("arrows_down").addClass("arrows_up");
+        if (currMenuLevel == 1) {
+            // 当前为一级菜单时
+            if (currMenuChild > 0) {
+                $this.children(".menu_arrows").removeClass("arrows_down").addClass("arrows_up");
+            }
+            // 其它一级菜单箭头向下
+            $this.parent().siblings(".menu_one").children('.menu_item').children(".menu_arrows").removeClass("arrows_up").addClass("arrows_down");
+            // 其他二级菜单箭头向下
+            $this.parent().siblings(".menu_one").children(".menu_two").children(".menu_item").children(".menu_arrows").removeClass('arrows_up').addClass("arrows_down");
+            // 其他二级菜单三级菜单去除样式
+            $this.parent().siblings(".menu_one").children(".menu_two").children(".menu_item").removeClass("active_two").removeClass("active_three");
+            $this.parent().siblings(".menu_one").children(".menu_two").children(".menu_item").children('.menu_arrows').attr('src', './icon/arrows.png');
+            $this.parent().siblings(".menu_one").children(".menu_two").children(".menu_three").children(".menu_item").removeClass("active_three");
+        } else if (currMenuLevel == 2) {
+            // 当前为二级菜单时
+            if (currMenuChild > 0) {
+                $this.children(".menu_arrows").removeClass("arrows_down").addClass("arrows_up");
+                $this.children(".menu_arrows").attr('src', './icon/arrows-active.png');
+                $this.addClass("active_two");
+            } else {
+                $this.addClass("active_three");
+            }
+            // 同级其他箭头向下
+            $this.parent().siblings(".menu_two").children(".menu_item").children(".menu_arrows").removeClass("arrows_up").addClass("arrows_down");
+            $this.parent().siblings(".menu_two").children('.menu_item').removeClass("active_two").removeClass("active_three");
+            $this.parent().siblings(".menu_two").children(".menu_item").children(".menu_arrows").attr('src', './icon/arrows.png');
+            $this.parent().siblings(".menu_two").children(".menu_three").children(".menu_item").removeClass('active_three');
         }
     }
     // 箭头向下动画
     function arrowsDown($this, currMenuLevel, currMenuChild) {
-        $this.children(".menu_arrows").removeClass("arrows_up").addClass("arrows_down");
+        if (currMenuLevel == 1) {
+            // 当前为一级菜单时
+            $this.children(".menu_arrows").removeClass('arrows_up').addClass("arrows_down");
+            // 当前一级菜单下箭头向下
+            $this.parent().children(".menu_two").children(".menu_item").children('.menu_arrows').removeClass("arrows_up").addClass("arrows_down");
+            $this.parent().children(".menu_two").children(".menu_item").removeClass("active_two");
+            $this.parent().children(".menu_two").children(".menu_item").children(".menu_arrows").attr('src', './icon/arrows.png');
+        } else if (currMenuLevel == 2) {
+            // 当前为二级菜单时
+            $this.children('.menu_arrows').removeClass("arrows_up").addClass("arrows_down");
+        }
+
     }
     // 展开二级菜单
     function spreadTwo($this, currMenuBool) {

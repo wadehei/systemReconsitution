@@ -59,6 +59,7 @@ html, body {
 .hj_menu_container .menu_one .menu_item:hover {
     border-left: 4px solid #2c7be5;
     background-color: rgba(44, 123, 229, 0.2);
+    color: #2c7be5;
 }
 
 .hj_menu_container .menu_one>.menu_item:hover .menu_icon:nth-of-type(1) {
@@ -67,10 +68,6 @@ html, body {
 
 .hj_menu_container .menu_one>.menu_item:hover .menu_icon:nth-of-type(2) {
     display: inline-block;
-}
-
-.hj_menu_container .menu_one .menu_item:hover p {
-    color: #2c7be5;
 }
 
 .hj_menu_container .menu_two, .hj_menu_container .menu_three {
@@ -90,6 +87,16 @@ html, body {
     height: 15px;
     position: absolute;
     right: 30px;
+}
+
+.hj_menu_container .menu_one .active_two {
+    color: #12263f;
+}
+
+.hj_menu_container .menu_one .active_three {
+    border-left: 4px solid #2c7be5;
+    background-color: rgba(44, 123, 229, 0.2);
+    color: #2c7be5;
 }
 
 /* 箭头向上动画 */
@@ -117,9 +124,9 @@ html, body {
 
 @keyframes down {
     from {
-        transform: rotate(0deg);
+        transform: rotate(-180deg);
     }
     to {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
 }
