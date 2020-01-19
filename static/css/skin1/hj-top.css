@@ -36,10 +36,12 @@ body a {
     min-width: 400px;
     width: 60px;
 }
-.hj-nav-bar .hj-menu span:nth-of-type(1){
+
+.hj-nav-bar .hj-menu span:nth-of-type(1) {
     position: relative;
 }
-.hj-nav-bar .hj-menu span:nth-of-type(3){
+
+.hj-nav-bar .hj-menu span:nth-of-type(3) {
     position: relative;
     top: 6px;
 }
@@ -100,7 +102,7 @@ body a {
 }
 
 .hj-menu .icon-question {
-    line-height:60px;
+    line-height: 60px;
 }
 
 .hj-menu .dropdown-toggle {
@@ -108,16 +110,19 @@ body a {
     padding-left: 0;
     width: auto;
 }
-.hj-menu .hj-user{
+
+.hj-menu .hj-user {
     width: 24px;
     height: 24px;
     margin-right: 10px;
 }
-.hj-menu .navbar-nav .dropdown-menu{
+
+.hj-menu .navbar-nav .dropdown-menu {
     left: auto;
     right: 0;
     position: absolute;
 }
+
 .hj-menu .icon-refresh {
     line-height: 59px;
 }
@@ -134,7 +139,8 @@ body a {
     color: #12263f;
     vertical-align: top;
 }
-.hj-menu li a i{
+
+.hj-menu li a i {
     color: #12263f;
 }
 
@@ -172,12 +178,11 @@ i.antd-pro-components-global-header-index-trigger {
     top: 0;
     left: 75px;
 }
-.hj-nav-bar.navbar .page-logo img{
+
+.hj-nav-bar.navbar .page-logo img {
     vertical-align: -10px;
     margin-right: 4px;
 }
-
-
 
 .hj-nav-bar.navbar .menu-toggler.responsive-toggler {
     position: absolute;
@@ -193,7 +198,9 @@ i.antd-pro-components-global-header-index-trigger {
     display: block !important;
     background-color: #2c7be5;
 }
-.hj-nav-bar.navbar .menu-toggler>span:before, .hj-nav-bar.navbar .menu-toggler>span:after {
+
+.hj-nav-bar.navbar .menu-toggler>span:before,
+.hj-nav-bar.navbar .menu-toggler>span:after {
     content: '';
 }
 
@@ -207,16 +214,21 @@ i.antd-pro-components-global-header-index-trigger {
     position: relative;
     transition: all ease .3s;
 }
-.hj-nav-bar.navbar .menu-toggler>span, .hj-nav-bar.navbar .menu-toggler>span:before, .hj-nav-bar.navbar .menu-toggler>span:after {
+
+.hj-nav-bar.navbar .menu-toggler>span,
+.hj-nav-bar.navbar .menu-toggler>span:before,
+.hj-nav-bar.navbar .menu-toggler>span:after {
     background-color: #fff;
 }
 
-.hj-nav-bar.navbar .menu-toggler>span{
+.hj-nav-bar.navbar .menu-toggler>span {
     top: 28px;
 }
+
 .hj-nav-bar.navbar .menu-toggler>span:before {
     top: -42px;
 }
+
 .hj-nav-bar.navbar .menu-toggler>span:after {
     top: -88px;
 }
@@ -228,8 +240,8 @@ i.antd-pro-components-global-header-index-trigger {
 .hj-nav-bar.navbar .page-logo .hj-system-name {
     transition: all .2s;
     white-space: nowrap;
-    font-size: 18px;
-    color: #333333
+    font-size:23px;
+    color: #2c7be5
 }
 
 .hj-nav-bar.navbar .page-logo.offset256 .hj-system-name {

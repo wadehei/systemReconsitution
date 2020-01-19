@@ -1,6 +1,6 @@
 @font-face {
   font-family: "hj-font-2";
-   url('zzgf.OTF?t=1543904346619') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+   src:url('./zzgf.OTF');
 }
 
 .hj-font2 {
