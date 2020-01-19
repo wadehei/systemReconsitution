@@ -4,11 +4,12 @@
 
 .fixed-table-container{
     border-top: 0;
+    border-color: #edf2f9;
 }
 
 .table-advance thead tr th {
-    background-color: #f1f4f7;
+    background-color: #f7fafc;
     font-size: 14px;
     font-weight: 400;
-    color: #3f444a;
+    color: #6e84a3;
 }
