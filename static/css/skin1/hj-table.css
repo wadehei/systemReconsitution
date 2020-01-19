@@ -1,0 +1,14 @@
+.bootstrap-table .table{
+    border-bottom: 0;
+}
+
+.fixed-table-container{
+    border-top: 0;
+}
+
+.table-advance thead tr th {
+    background-color: #f1f4f7;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3f444a;
+}

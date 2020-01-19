@@ -104,7 +104,8 @@
 
 #editor-tabs .page-tabs {
     width: 100%;
-    left: 0
+    left: 0;
+    z-index: 99999;
 }
 
 .btn-group>.dropdown-menu:before,

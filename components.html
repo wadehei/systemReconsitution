@@ -7,30 +7,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--bootstrap样式-->
-    <link rel="stylesheet" href="./static/plugin/bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./static/plugin/bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
 
     <!-- 自定义字体图标 -->
-    <link rel="stylesheet" href="./static/fonts/hj-icon-1/hj-icon1.css" />
+    <link rel="stylesheet" href="./static/fonts/hj-icon-1/hj-icon1.css"/>
 
     <!-- fontAwesome字体图标库 -->
-    <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet" asp-append-version="true" />
+    <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet"/>
 
     <!-- 下拉选择 -->
-    <link rel="stylesheet" href="./static/plugin/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./static/plugin/bootstrap-select/bootstrap-select.css"/>
+
+    <!--表格插件样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-table/bootstrap-table.min.css"/>
 
 
     <!-- 皮肤样式 -->
     <!--头部导航样式-->
-    <link rel="stylesheet" href="./static/css/skin1/hj-top.css" />
+    <link rel="stylesheet" href="./static/css/skin1/hj-top.css"/>
     <!-- iframe样式 -->
-    <link rel="stylesheet" href="./static/css/skin1/hj-content.css" />
+    <link rel="stylesheet" href="./static/css/skin1/hj-content.css"/>
 </head>
 
 <body>
-    <div class="form-group">
-        <input type="text" id="filter" class="form-control" placeholder="请输入配置类型编码/名称" value="">
-    </div>
+<!--组件1，带有按钮的查询 input+button -->
+<div class="form-group d-flex">
+    <input type="text" id="filter" class="form-control hj-w300" placeholder="请输入配置类型编码/名称" value="">
     <button type="button" id="" class="btn btn-success hj-query-btn">搜索</button>
+</div>
+<!--组件2，带有按钮的查询 label+button -->
+<div class="form-group d-flex form-check-inline">
+    <label class="control-label">描述</label>
+    <div class="col-sm-9 col-md-10">
+        <input type="text" class="form-control" placeholder="请输入配置类型编码/名称" value="">
+    </div>
+</div>
+<!--组件3，带有按钮的查询 label+button -->
+<div class="form-group d-inline-flex form-check-inline">
+    <label class="control-label">描述</label>
+    <div class="col-sm-9 col-md-10 d-inline-flex form-check-inline">
+        <input type="text" class="form-control hj-w300" placeholder="请输入配置类型编码/名称" value="">
+        <span class="hj-ml-10 hj-mr-10">一</span>
+        <input type="text" class="form-control hj-w300" placeholder="请输入配置类型编码/名称" value="">
+    </div>
+</div>
+<!--组件4，带有按钮的查询 label+button -->
+<div class="form-group d-flex form-check-inline">
+    <label class="control-label">描述</label>
+    <div class="col-sm-9 col-md-10">
+        <textarea class="form-control" id="DataDesc" maxlength="200" name="DataDesc" rows="3"></textarea>
+    </div>
+</div>
+<!--组件5（按钮组）-->
+<div class="caption">
+    <button type="button" class="btn btn-success hj-query-btn">添加</button>
+    <button type="button" class="btn btn-danger hj-query-btn">批量删除</button>
+    <button type="button" class="btn btn-success " data-num="1">
+       高级查询
+        <span class="fa fa-caret-down"></span>
+    </button>
+    <button type="button" class="btn hj-max-search" data-num="1">
+        高级查询
+        <span class="fa fa-caret-down"></span>
+    </button>
+    <button type="button" class="btn hj-max-search hj-active" data-num="1">
+        高级查询
+        <span class="fa fa-caret-down"></span>
+    </button>
+</div>
+<!--组件6，带有按钮的查询 label+button -->
+<div class="form-group d-flex form-check-inline">
+    <label class="control-label">描述</label>
+
+</div>
+
+<!--单选按钮-->
+
+
+<!--下拉菜单-->
+<div class="dropdown">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+       data-close-others="true">
+        <span class="username username-hide-on-mobile"> 菜单</span>
+        <i class="fa fa-angle-down"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-default">
+        <li>
+            <a href="javascript:void(0)" data-target="" data-toggle="modal">
+                <i class="icon-lock"></i> 菜单1
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-target="" data-toggle="modal">
+                <i class="icon-lock"></i> 菜单2
+            </a>
+        </li>
+    </ul>
+</div>
+<!--标准表格-->
+<table id="tabList">
+    <thead>
+        <tr>
+            <th data-field="title1">标题1</th>
+            <th data-field="title2">标题2</th>
+            <th data-field="title3">标题3</th>
+            <th data-field="title4">标题4</th>
+            <th data-field="title5">标题5</th>
+            <th data-field="title6">标题6</th>
+            <th data-field="title7">标题7</th>
+            <th data-field="title8">标题8</th>
+        </tr>
+    </thead>
+</table>
+
+<!---->
 </body>
 
 <!--jquery-->
@@ -45,7 +135,10 @@
 <!-- 公共js -->
 <script src="./static/js/hj-common.js"></script>
 
-
+<!--表格插件-->
+<script src="./static/plugin/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="./static/plugin/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="./static/js/hj-table.js"></script>
 
 
 <script>

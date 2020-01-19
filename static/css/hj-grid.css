@@ -52,3 +52,41 @@
 .hj-mb-20 {
     margin-bottom: 20px !important;
 }
+
+
+/* magin-left简写 */
+
+.hj-ml-5 {
+    margin-left: 5px !important;
+}
+
+.hj-ml-10 {
+    margin-left: 10px !important;
+}
+
+.hj-ml-15 {
+    margin-left: 15px !important;
+}
+
+.hj-ml-20 {
+    margin-left: 20px !important;
+}
+
+
+/* magin-right简写 */
+
+.hj-mr-5 {
+    margin-right: 5px !important;
+}
+
+.hj-mr-10 {
+    margin-right: 10px !important;
+}
+
+.hj-mr-15 {
+    margin-right: 15px !important;
+}
+
+.hj-mr-20 {
+    margin-right: 20px !important;
+}

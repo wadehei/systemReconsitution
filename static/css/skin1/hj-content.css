@@ -5,6 +5,14 @@
 @import "../../css/skin1/hj-breadcrumb.css";
 @import "../../css/skin1/hj-input.css";
 @import "../../css/skin1/hj-button.css";
+@import "../../css/skin1/hj-scroll-bar.css";
+@import "../../css/skin1/hj-table.css";
+
+@import "../../css/hj-grid.css";
+body {
+    overflow: hidden;
+}
+
 .page-content-wrapper {
     width: 100%;
     height: 100%;

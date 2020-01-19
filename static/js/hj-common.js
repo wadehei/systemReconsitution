@@ -80,6 +80,17 @@ $(function() {
         else
             url += '?menuId=' + id;
         return '<iframe  scrolling="auto" frameborder="0"  src="' + url + '" style="width:100%;height:100%;padding:0px;overflow-y:auto;overflow-x:hidden;"></iframe>';
-    };
+    }
+
+
+    function add(){
+
+    }
+    function edit(){
+
+    }
+    function del() {
+
+    }
 
 });

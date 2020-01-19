@@ -59,3 +59,13 @@
     -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, .2) !important;
     -moz-box-shadow: 0 0 0 2px rgba(24, 144, 255, .2) !important;
 }
+
+/*textarea,input,select*/
+.d-flex label{
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.control-label+.form-check-inline{
+    padding-left: 15px;
+}
