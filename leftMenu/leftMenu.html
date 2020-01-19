@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="../static/plugin/bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+    <!-- 自定义字体图标 -->
+    <link rel="stylesheet" href="../static/fonts/hj-icon-1/hj-icon1.css" />
+    <!-- fontAwesome字体图标库 -->
+    <link href="../static/fonts/font-awesome/font-awesome.css" rel="stylesheet" asp-append-version="true" />
+    <!-- 多标签样式 -->
+    <!-- 皮肤样式 -->
+    <!--头部导航样式-->
+    <link rel="stylesheet" href="../static/css/skin1/hj-top.css" />
+    <link rel="stylesheet" href="../static/css/skin1/hj-content.css" />
+    <link rel="stylesheet" href="./leftMenu.css">
+</head>
+
+<body>
+    <!-- 左侧三级菜单 -->
+    <div class="hj_menu_container">
+
+    </div>
+</body>
+<script id="menuId" type="text/html">
+    {{each menuList menuOne i}}
+    <div class="menu_one">
+        <div class="menu_item" data-bool="0" data-level="1" data-index="{{i}}" data-length="{{menuOne.twoList.length}}">
+            <img class="menu_icon" src="{{menuOne.icon}}" alt="">
+            <img class="menu_icon" src="{{menuOne.iconOn}}" alt="">
+            <p>
+                {{menuOne.one}}
+            </p>
+            {{if menuOne.twoList && menuOne.twoList.length>0}}
+            <img class="menu_arrows arrows_down" src="./icon/arrows.png" alt="">
+            {{/if}}
+        </div>
+        {{if menuOne.twoList && menuOne.twoList.length>0}}
+        {{each menuOne.twoList menuTwo j}}
+        <div class="menu_two overflow">
+            <div class="menu_item" data-bool="0" data-level="2" data-index="{{j}}" data-length="{{menuTwo.threeList.length}}">
+                <p>{{menuTwo.two}}</p>
+                {{if  menuTwo.threeList&&menuTwo.threeList.length>0}}
+                <img class="menu_arrows arrows_down" src="./icon/arrows.png" alt="">
+                {{/if}}
+            </div>
+            {{if menuTwo.threeList&&menuTwo.threeList.length>0}}
+            {{each menuTwo.threeList menuThree k}}
+            <div class="menu_three overflow">
+                <div class="menu_item" data-level="3" data-index="{{k}}">
+                    <p>
+                        {{menuThree.three}}
+                    </p>
+                </div>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div> 
+        {{/each}}
+        {{/if}}
+    </div>
+    {{/each}}
+</script>
+
+<!--bootstrap核心js-->
+<script src="../static/plugin/jquery/jquery-3.4.0.min.js"></script>
+<script src="../static/plugin/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="../static/plugin/art-template.js"></script>
+<script src="./menuJson.js"></script>
+<script src="./leftMenu.js"></script>
+
+</html>
