@@ -39,6 +39,7 @@
 .nth-tabs .content-tabs {
     margin-top: 0;
     line-height: 20px;
+    height: 42px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

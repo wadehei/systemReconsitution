@@ -8,6 +8,9 @@
 @import "../../css/skin1/hj-scroll-bar.css";
 @import "../../css/skin1/hj-table.css";
 
+@import "../../plugin/metronic/components.css";
+@import "../../css/skin1/hj-checkbox.css";
+
 @import "../../css/hj-grid.css";
 body {
     overflow: hidden;
