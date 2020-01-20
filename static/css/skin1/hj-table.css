@@ -17,3 +17,26 @@
 .bootstrap-table .no-records-found {
     background-color: transparent !important;
 }
+
+
+/* 操作的样式 */
+
+#tabList td a[title],
+.orderInfo td a[title] {
+    color: #1891ff;
+}
+
+#tabList a[title]:hover,
+.orderInfo td a[title]:hover {
+    color: #0075e0;
+}
+
+#tabList td a[title *='删除'],
+.orderInfo span a[title *='删除'] {
+    color: #ed6873;
+}
+
+#tabList td a[title *='删除']:hover,
+.orderInfo span a[title *='删除']:hover {
+    color: #ef2738;
+}

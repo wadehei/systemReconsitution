@@ -30,7 +30,7 @@ $("#loginBtn").click(function(e) {
         var userName = $("#UserName").val(),
             password = $("#Password").val(); //checkCode = $("#checkCode").val()
         abp.ajax({
-            url: '/Login/CheckLogin',
+            url: './static/json/login.json',
             type: 'POST',
             abpHandleError: false,
             data: JSON.stringify({

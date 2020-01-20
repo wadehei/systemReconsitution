@@ -1,0 +1,103 @@
+{
+    "success": true,
+    "data": [{
+            "id": "AA05",
+            "name": "参数选项管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA10",
+            "name": "功能菜单管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA15",
+            "name": "对接平台管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA20",
+            "name": "服务器配置管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA25",
+            "name": "入驻企业管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA27",
+            "name": "管理维护工具",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA30",
+            "name": "报表设置管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA35",
+            "name": "平台会员管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AA90",
+            "name": "平台组织架构",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AB10",
+            "name": "定时任务管理",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        },
+        {
+            "id": "AB15",
+            "name": "监控数据查看",
+            "pId": "",
+            "open": false,
+            "isParent": false,
+            "checked": false,
+            "isHidden": false
+        }
+    ]
+}
