@@ -56,3 +56,7 @@
 .dropdown-menu li:hover {
     background-color: #e6f7ff;
 }
+
+.open>.dropdown-menu {
+    display: block;
+}

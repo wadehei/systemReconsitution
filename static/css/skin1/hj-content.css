@@ -1,5 +1,6 @@
 /* 多标签样式*/
 
+@import "../../plugin/metronic/components.css";
 @import "../../plugin/nth.tabs/css/nth.tabs.css";
 @import "../../css/skin1/hj-nth-tabs.css";
 @import "../../css/skin1/hj-breadcrumb.css";
@@ -7,10 +8,7 @@
 @import "../../css/skin1/hj-button.css";
 @import "../../css/skin1/hj-scroll-bar.css";
 @import "../../css/skin1/hj-table.css";
-
-@import "../../plugin/metronic/components.css";
 @import "../../css/skin1/hj-checkbox.css";
-
 @import "../../css/hj-grid.css";
 body {
     overflow: hidden;

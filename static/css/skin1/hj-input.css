@@ -52,7 +52,8 @@
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-.form-control:focus {
+.form-control:focus,
+.bootstrap-select.open .btn {
     border-color: #40a9ff;
     outline: 0;
     box-shadow: 0 0 0 2px rgba(24, 144, 255, .2) !important;
@@ -60,12 +61,65 @@
     -moz-box-shadow: 0 0 0 2px rgba(24, 144, 255, .2) !important;
 }
 
+
+/* placeholder样式 */
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent !important;
+}
+
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: transparent !important;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: transparent !important;
+}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: transparent !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #95aac9 !important;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #95aac9 !important;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #95aac9 !important;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #95aac9 !important;
+}
+
+
 /*textarea,input,select*/
-.d-flex label{
+
+.d-flex label {
     white-space: nowrap;
     margin-bottom: 0;
 }
 
-.control-label+.form-check-inline{
+.control-label+.form-check-inline {
     padding-left: 15px;
 }

@@ -1,11 +1,15 @@
 //通过bootstrap-table初始化表格
+debugger
 var tab = $('#tabList').bootstrapTable({
     url: './static/json/table.json',
-    queryParams: function (params) {
+    queryParams: function(params) {
         return getQuery(params);
     },
-    onLoadSuccess: function () {
-        debugger
+    onLoadSuccess: function(json) {
+        // if(json.success){
+        //
+        // }
+        // return json.data.rows;
 
     }
 });

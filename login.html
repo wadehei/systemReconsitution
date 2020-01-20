@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./static/css/default.css" />
+    <link rel="stylesheet" href="./static/css/login.css">
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <img class="imgs" src="/image/bg.jpg" onerror="this.src='/image/bg.jpg';this.onerror = null" />
+        </div>
+        <div class="login">
+            <div class="content">
+                <div class="title">
+                    <img src="/image/logo.png" onerror="this.src='/image/logo.png';this.onerror = null" width="60" height="60" />
+                    <div class="titlec">
+                        <h3>后台管理系统</h3>
+                        <p class="en">华景乐游</p>
+                    </div>
+                    <p class="intro">对后台管理系的介绍</p>
+                </div>
+                <form class="login-form" asp-action="CheckLogin" method="post" id="LoginForm">
+                    <div class="form-g">
+                        <input type="text" class="form-control" placeholder="请输入用户名" id="UserName" name="username" autocomplete="off" />
+                        <i class="icon iconfont icon-person"></i>
+                    </div>
+                    <div class="form-g">
+                        <input type="password" class="form-control" placeholder="请输入密码" id="Password" name="password" autocomplete="off" />
+                        <i class="icon iconfont icon-password"></i>
+                    </div>
+
+                    <div class="form-g memoryPassord">
+                        <i class="icon iconfont icon-radio"></i><span>记住我</span>
+                        <span class="errorContent"></span>
+                        <input type="hidden" name="rememberme" id="rememberme" value="false" />
+                    </div>
+                    <button id="loginBtn" type="button" class="btns">登录</button>
+                </form>
+            </div>
+            <p class="titleP">华景乐游智慧科技有限公司</p>
+        </div>
+    </div>
+</body>
+
+<!--jquery-->
+<script src="./static/plugin/jquery/jquery-3.4.0.min.js"></script>
+<!-- 公共js -->
+<script src="./static/js/login.js"></script>
+<script>
+</script>
+
+
+</html>

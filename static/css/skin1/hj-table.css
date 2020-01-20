@@ -1,8 +1,8 @@
-.bootstrap-table .table{
+.bootstrap-table .table {
     border-bottom: 0;
 }
 
-.fixed-table-container{
+.fixed-table-container {
     border-top: 0;
     border-color: #edf2f9;
 }
@@ -12,4 +12,8 @@
     font-size: 14px;
     font-weight: 400;
     color: #6e84a3;
+}
+
+.bootstrap-table .no-records-found {
+    background-color: transparent !important;
 }
