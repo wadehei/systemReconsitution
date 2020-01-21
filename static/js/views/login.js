@@ -14,11 +14,11 @@ $(function() {
     }
 });
 // 前端多语言
-var L = function(key) {
-        var text = abp.localization.values['vNext'][key];
-        return text ? text : key;
-    }
-    // 登录
+// var L = function(key) {
+//         var text = abp.localization.values['vNext'][key];
+//         return text ? text : key;
+//     }
+// 登录
 $("#loginBtn").click(function(e) {
     var status = verify();
     if (status) {
@@ -29,10 +29,10 @@ $("#loginBtn").click(function(e) {
 
         var userName = $("#UserName").val(),
             password = $("#Password").val(); //checkCode = $("#checkCode").val()
-        abp.ajax({
+        $.ajax({
             url: './static/json/login.json',
             type: 'POST',
-            abpHandleError: false,
+            // abpHandleError: false,
             data: JSON.stringify({
                 UserName: userName,
                 Password: password,
@@ -42,10 +42,10 @@ $("#loginBtn").click(function(e) {
         }).done(function(data) {
             localStorage.setItem('sysUserName', userName);
             if (data && data.code == -1) {
-                $(".errorContent").text(L("A101VerifyError")).show();
+                // $(".errorContent").text(L("A101VerifyError")).show();
 
             } else if (data && data.code == -2) {
-                $(".errorContent").text(L("A101InvalidUserNameOrPassword")).show();
+                // $(".errorContent").text(L("A101InvalidUserNameOrPassword")).show();
             }
         }).fail(function(data) {
             $(".errorContent").text(data.message).show();
@@ -69,7 +69,7 @@ function verify() {
 
     if (nameVal.length == 0 && passwordVal.length == 0) {
         //$(".errorContent").text(L("UserNameRequired")).show();
-        $(".errorContent").text(L('A101Input') + L("A101UserNameAndPassword")).show();
+        // $(".errorContent").text(L('A101Input') + L("A101UserNameAndPassword")).show();
         name.focus();
         name.unbind().keyup(function() {
             if (name.val().length > 0 && password.val().length > 0)
@@ -84,7 +84,7 @@ function verify() {
         return state = false;
     }
     if (nameVal.length == 0) {
-        $(".errorContent").text(L('A101Input') + L("A101UserName")).show();
+        // $(".errorContent").text(L('A101Input') + L("A101UserName")).show();
         name.focus();
         name.unbind().keyup(function() {
             if (name.val().length > 0)
@@ -94,7 +94,7 @@ function verify() {
     }
 
     if (passwordVal.length == 0) {
-        $(".errorContent").text(L('A101Input') + L("A101Password")).show();
+        // $(".errorContent").text(L('A101Input') + L("A101Password")).show();
         password.focus();
         password.unbind().keyup(function() {
             if (password.val().length > 0)
