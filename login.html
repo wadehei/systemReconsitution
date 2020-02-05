@@ -5,45 +5,62 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!--bootstrap样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-4.3.1-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./static/css/default.css" />
     <link rel="stylesheet" href="./static/css/login.css">
 </head>
 
 <body>
-    <div class="main">
-        <div>
-            <img class="imgs" src="./static/img/test/bg.jpg" onerror="this.src='./static/img/test/bg.jpg';this.onerror = null" />
-        </div>
-        
+    <div class="main d-flex">
         <div class="login">
+            <!-- 头部导航 -->
+            <div class="hj-nav-bar navbar">
+                <div class="page-header-inner">
+                    <div class="page-logo">
+                        <img src="./static/img/test/logo.png" alt="">
+                        <span class="hj-system-name hj-font2">华景云</span>
+                    </div>
+                </div>
+            </div>
             <div class="content">
                 <div class="title">
-                    <img src="./static/img/test/logo.png" onerror="this.src='./static/img/test/logo.png';this.onerror = null" width="60" height="60" />
                     <div class="titlec">
-                        <h3>后台管理系统</h3>
-                        <p class="en">华景乐游</p>
+                        <h3>密码登录</h3>
                     </div>
-                    <p class="intro">对后台管理系的介绍</p>
                 </div>
                 <form class="login-form" asp-action="CheckLogin" method="post" id="LoginForm">
                     <div class="form-g">
-                        <input type="text" class="form-control" placeholder="请输入用户名" id="UserName" name="username" autocomplete="off" />
+                        <label for="username">用户名</label>
+                        <input type="text" class="form-control" placeholder="请输入用户名" id="username" name="username"
+                            autocomplete="off" />
                         <i class="icon iconfont icon-person"></i>
                     </div>
                     <div class="form-g">
-                        <input type="password" class="form-control" placeholder="请输入密码" id="Password" name="password" autocomplete="off" />
+                        <label for="username">密码</label>
+                        <input type="password" class="form-control" placeholder="请输入密码" id="password" name="password"
+                            autocomplete="off" />
                         <i class="icon iconfont icon-password"></i>
                     </div>
-
+                    <div class="form-g">
+                        <label for="checkCode">验证码</label>
+                        <input type="password" class="form-control" placeholder="请输入密码" id="checkCode" name="checkCode"
+                            autocomplete="off" />
+                        <img id="checkCodeImg" class="checkCodeImg" src="/passport/check-code.do"/>
+                    </div>
                     <div class="form-g memoryPassord">
                         <i class="icon iconfont icon-radio"></i><span>记住我</span>
                         <span class="errorContent"></span>
                         <input type="hidden" name="rememberme" id="rememberme" value="false" />
+                        <a href="http://www.baidu.com">忘记密码?</a>
                     </div>
                     <button id="loginBtn" type="button" class="btns">登录</button>
                 </form>
             </div>
-            <p class="titleP">华景乐游智慧科技有限公司</p>
+            <!-- <p class="titleP">Copyright © 2012-2019   华景乐游   版权所有   豫ICP备112456789525号</p> -->
+        </div>
+        <div style="background: url(./static/img/test/bg.jpg) center center no-repeat;">
+        
         </div>
     </div>
 </body>
