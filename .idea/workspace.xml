@@ -5,148 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86fc5d32-b20d-4f64-af67-9740877102d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hjly/merchant-list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modal1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modal2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/skin1/hj-modal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/abp.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/abp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.jtable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.signalr-client.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.signalr.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.signalr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/angularjs/abp.ng.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/libs/requirejs/plugins/service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/scripts/utils/ie10fix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.mixings.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.mixings.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.mixings.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/abp.mixings.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/Abp/Framework/styles/utils/ie10fix.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/abp-web-resources/packages.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootbox/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootbox/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootbox/bootbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootbox/bootbox.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/js/bootstrap-paginator.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-select/bootstrap-select.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-select/bootstrap-select.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-select/defaults-zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/bootstrap-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/bootstrap-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/accent-neutralise/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/accent-neutralise/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/angular/bootstrap-table-angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/cookie/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/cookie/bootstrap-table-cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/cookie/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/copy-rows/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/copy-rows/bootstrap-table-copy-rows.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/copy-rows/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/editable/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/editable/bootstrap-table-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/editable/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/export/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/export/bootstrap-table-export.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/export/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/filter-control/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/filter-control/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/filter/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/filter/bootstrap-table-filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/filter/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/flat-json/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/flat-json/bootstrap-table-flat-json.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/flat-json/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by-v2/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by-v2/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by/bootstrap-table-group-by.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by/bootstrap-table-group-by.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/group-by/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/i18n-enhance/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/i18n-enhance/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/key-events/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/key-events/bootstrap-table-key-events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/key-events/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/mobile/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/mobile/bootstrap-table-mobile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/mobile/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multi-column-toggle/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multi-column-toggle/bootstrap-table-multi-toggle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multi-column-toggle/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multiple-search/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multiple-search/bootstrap-table-multiple-search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multiple-search/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multiple-sort/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/multiple-sort/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/natural-sorting/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/natural-sorting/bootstrap-table-natural-sorting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/natural-sorting/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/reorder-columns/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/reorder-columns/bootstrap-table-reorder-columns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/reorder-columns/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/reorder-rows/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/reorder-rows/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/resizable/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/resizable/bootstrap-table-resizable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/resizable/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/select2-filter/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/select2-filter/bootstrap-table-select2-filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/select2-filter/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/sticky-header/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/sticky-header/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/toolbar/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/extensions/toolbar/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/mergecell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/bootstrap/plugins/bootstrap-table/tableExport.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin/metronic/plugins.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components.html" afterPath="$PROJECT_DIR$/components.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/skin1/hj-content.css" afterPath="$PROJECT_DIR$/static/css/skin1/hj-content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/hj-common.js" afterPath="$PROJECT_DIR$/static/js/hj-common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/hj-table.js" afterPath="$PROJECT_DIR$/static/js/hj-table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/json/table.json" afterPath="$PROJECT_DIR$/static/json/table.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin/bootstrap-table/bootstrap-table-default.js" afterPath="$PROJECT_DIR$/static/plugin/bootstrap-table/bootstrap-table-default.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -943,12 +802,12 @@
       <workItem from="1581164128250" duration="2957000" />
       <workItem from="1581213506383" duration="588000" />
       <workItem from="1581215256593" duration="7054000" />
-      <workItem from="1581225537141" duration="971000" />
+      <workItem from="1581225537141" duration="1440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69527000" />
+    <option name="totallyTimeSpent" value="69996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -960,8 +819,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="1" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -974,7 +832,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48402366" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34556213" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34556213" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28579175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
