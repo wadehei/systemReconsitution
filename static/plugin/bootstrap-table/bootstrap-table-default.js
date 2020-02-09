@@ -19,8 +19,8 @@
         pageList: [10, 15, 20, 50, 100],
         responseHandler: function(data) {
             return {
-                "rows": data.data,
-                "total": data.total // 数据条数, 用来配置分页
+                "rows": data.data.data,
+                "total": data.data.total // 数据条数, 用来配置分页
             };
         }
     };

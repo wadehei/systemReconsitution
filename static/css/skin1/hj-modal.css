@@ -1,0 +1,86 @@
+/*弹框样式修改*/
+r{
+    color: #f00;
+}
+.mt-repeater .mt-repeater-input:last-child a{margin-top: 20px;}
+.modal .modal-dialog{overflow-y: hidden; overflow-x:hidden; min-height: 200px;  height: 100% !important;  }
+.modal-open .modal{overflow-y: hidden !important;}
+.modal .modal-content {
+    border: 0;
+    height: 85%;
+    min-height: 200px;
+    overflow: hidden;
+    padding-bottom: 0;
+    background-color: transparent;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+.modal .modal-body .portlet.portlet-form {
+    margin-bottom: 0
+}
+.modal .modal-header {
+    background-color: #fff;
+}
+.modal .modal-body {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    overflow-y: auto;
+    overflow-x:hidden;
+    background-color: #fff;
+    padding-top: 0;
+}
+.modal .overflow-y-auto{overflow-y:auto !important;overflow-x:hidden}
+.modal .overflow-y-auto+.form-actions{margin-top:0 !important}
+/*.modal .overflow-y-auto.y-hidden{overflow-y:hidden !important;overflow-x:hidden}*/
+.modal .height-auto{height:auto !important}
+.modal .modal-footer{background-color:#fff;}
+.modal.bootbox-confirm .bootbox-body {
+    padding: 0 15px 20px;
+}
+.modal.modal-error .bootbox-body {
+    padding: 0 15px;
+}
+.modal.modal-error .bootbox-close-button.close {
+    margin-right:15px
+}
+.modal .modal-dialog.overflow-hidden {
+    overflow: hidden !important;
+}
+.modal .modal-body{padding-bottom:5px;}
+.modal-error.in .modal-body{padding-bottom:20px;}
+
+.modal .row.disPlayFlex .form-actions {
+    margin-top: 0
+}
+.modal .row.disPlayFlex .portlet.light.bordered {
+    margin-bottom: 0
+}
+.row.disPlayFlex .absoluteHtml + .portlet-body, .disPlayFlex > div:first-child + div .portlet-body{
+    overflow: hidden;
+}
+
+
+.modal .form-actions{padding:20px 15px;}
+.modal .form-actions .row {
+    text-align: center
+}
+.modal .form-actions .row > div[class *='col-md'] {
+    margin: auto;
+    float: none
+}
+
+
+/*modal里面的tab样式*/
+.tabbable-line > .nav-tabs > li.active{border-bottom:4px solid #1890ff;}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover{border-bottom:4px solid #1890ff;}
+
+
+/*modal大小*/
+.dialog-1180 .modal-dialog{width:1180px !important;}
+.dialog-800 .modal-dialog{width:800px !important;}
+.dialog-600 .modal-dialog{width:600px !important;}
+.dialog-1000 .modal-dialog{width:1000px !important;}
+.dialog-1100 .modal-dialog{width:1100px !important;}
+.dialog-1200 .modal-dialog{width:1200px !important;}

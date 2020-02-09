@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap/css/bootstrap.min.css" />
+
+    <!-- 自定义字体图标 -->
+    <link rel="stylesheet" href="./static/fonts/hj-icon-1/hj-icon1.css" />
+
+    <!-- fontAwesome字体图标库 -->
+    <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet" />
+
+    <!-- 下拉选择 -->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./static/plugin/bootstrap-dialog/css/bootstrap-dialog.css" />
+
+    <!--表格插件样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-table/bootstrap-table.min.css" />
+
+
+    <!-- 皮肤样式 -->
+    <!--头部导航样式-->
+    <link rel="stylesheet" href="./static/css/skin1/hj-top.css" />
+    <!-- iframe样式 -->
+    <link rel="stylesheet" href="./static/css/skin1/hj-content.css" />
+
+
+</head>
+
+<body class="overflow:auto">
+
+<div class="portlet light portlet-fit portlet-form">
+
+    <div class="portlet-body">
+        <div class="tabbable-line boxless tabbable-reversed  tab-toggle y-hidden">
+            <ul class="nav nav-tabs" id="ulTab">
+                <li class="active" id="li0">
+                    <a href="#tab_0" data-toggle="tab"> 企业基本信息 </a>
+                </li>
+                <li id="li1">
+                    <a href="#tab_1" data-toggle="tab"> 企业扩展信息 </a>
+                </li>
+                <li id="li2">
+                    <a href="#tab_2" data-toggle="tab"> 企业规则</a>
+                </li>
+                <li id="li3">
+                    <a href="#tab_3" data-toggle="tab"> 企业分组 <span id="role" class="margin-left-5 badge badge-success">0</span> </a>
+                </li>
+                <li id="li4">
+                    <a href="#tab_4" data-toggle="tab"> 企业售票岗位 <span id="ticket" class="margin-left-5 badge badge-success">0</span> </a>
+                </li>
+            </ul>
+            <div class="tab-content scrollBody overflow-y-auto" style="padding-top: 0px; height: 158px;">
+                <div class="tab-pane active " id="tab_0">
+                    <form id="formEdit" class="form-horizontal" action="/Sys/Company/Save" method="post" novalidate="novalidate">
+                        <div class="form-body">
+                            <input type="hidden" name="Id" id="Id">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label "><r>*</r>企业编码</label>
+                                <div class="col-sm-9 col-md-4"><input chrnum="True" class="form-control" id="CompanyCode" maxlength="3" name="CompanyCode" required="True" type="text" value="" aria-required="true"></div>
+
+                                <label class="col-sm-3 col-md-2 control-label " for="CompanyName"><r>*</r>企业名称</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="CompanyName" maxlength="100" name="CompanyName" required="true" type="text" value="" aria-required="true"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="UseEndDate"><r>*</r>有效截止时间</label>
+                                <div class="col-sm-9 col-md-4"><div class="input-group"><input class="bs-datetime form-control" dateiso="True" id="UseEndDate" name="UseEndDate" required="true" type="text" value="" aria-required="true"><span class="input-group-btn"><button class="btn-default btn" type="button"><span aria-hidden="true" class="fa-calendar fa"></span></button></span></div></div>
+                                <label class="col-sm-3 col-md-2 control-label " for="DataSort"><r>*</r>排序编码</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="DataSort" maxlength="10" name="DataSort" nochinese="True" required="true" type="text" value="" aria-required="true"></div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="DataDesc">描述</label>
+                                <div class="col-sm-9 col-md-10"><textarea class="form-control" id="DataDesc" maxlength="200" name="DataDesc" rows="3" style="max-width: 612px;"></textarea></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="DataMemo">备注</label>
+                                <div class="col-sm-9 col-md-10"><textarea class="form-control" id="DataMemo" maxlength="200" name="DataMemo" rows="3" style="max-width: 612px;"></textarea></div>
+                            </div>
+                        </div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HBk74YuezhOoijSVau_CKjmryP5SwzO28YU61ivKZJBFSLx-f3Kq1Ny9nu_b3IwQExH56VW7hQWdV-KtRHj9hcyUphy9K1JBmMrgVrGbUleFkwUQcbWGdeWivGOzjoAaQM2P1oxbBfMfgq2jZnvuOyKGRldCPei3P-teVam5n_eKipJTjFopl4Zl1LaGHAn6A"></form>
+                </div>
+                <div id="tab_1" class="tab-pane ">
+                    <form id="formEdit1" class="form-horizontal" novalidate="novalidate">
+                        <input type="hidden" name="LogoPath" id="LogoPath">
+                        <input type="hidden" name="LoginLogo" id="LoginLogo">
+                        <input type="hidden" name="LoginImgs" id="LoginImgs">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="Address">企业地址</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="Address" name="Address" type="text" value=""></div>
+                                <label class="col-sm-3 col-md-2 control-label " for="Tel">企业电话</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="Tel" name="Tel" phone="True" type="text" value=""></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="Fax">企业传真</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="Fax" name="Fax" nochinese="True" type="text" value=""></div>
+                                <label class="col-sm-3 col-md-2 control-label " for="Email">企业邮箱</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" email="True" id="Email" name="Email" type="text" value=""></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="WebUrl">企业网站</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="WebUrl" name="WebUrl" type="text" url="True" value=""></div>
+                                <label class="col-sm-3 col-md-2 control-label " for="CustomersTel">客服电话</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="CustomersTel" name="CustomersTel" phone="True" type="text" value=""></div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="SmsMobile">短信绑定手机号</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="SmsMobile" maxlength="11" mobile="True" name="SmsMobile" type="text" value=""></div>
+                                <label class="col-sm-3 col-md-2 control-label " for="LinkMan">联系人</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="LinkMan" name="LinkMan" type="text" value=""></div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="col-sm-3 col-md-2 control-label " for="MobileCode">手机号码</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="MobileCode" mobile="True" name="MobileCode" type="text" value=""></div>
+                                <label class="col-sm-3 col-md-2 control-label " for="LoginCSS">登录页CSS样式</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="LoginCSS" maxlength="100" name="LoginCSS" type="text" value=""></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="PlatName">登录页主标题</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="PlatName" maxlength="100" name="PlatName" type="text" value=""></div>
+                                <label class="col-sm-3 col-md-2 control-label " for="PlatNameSecond">登录页副标题</label>
+                                <div class="col-sm-9 col-md-4"><input class="form-control" id="PlatNameSecond" maxlength="100" name="PlatNameSecond" type="text" value=""></div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="LoginImgs">登录页背景图</label>
+                                <div class="col-sm-9 col-md-4">
+                                    <img style="border:none;width:80px;height:80px;" id="img">
+                                    <input type="file" style="display:none;" id="filesImgs" name="files" multiple="" onchange="upLoadClickImgs(1)">
+                                    <input type="button" id="upload" class="btn btn-success" onclick="upClickImgs(1)" style="cursor:pointer;width:60px;" value="上传">
+                                </div>
+                                <label class="col-sm-3 col-md-2 control-label " for="LoginLogo">登录页Logo</label>
+                                <div class="col-sm-9 col-md-4">
+                                    <img style="border:none;width:80px;height:80px;" id="logo">
+                                    <input type="file" style="display:none;" id="filesLogo" name="files" multiple="" onchange="upLoadClickImgs(2)">
+                                    <input type="button" id="upload" class="btn btn-success" onclick="upClickImgs(2)" style="cursor:pointer;width:60px;" value="上传">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="PlatIntroduce">登录页标题描述</label>
+                                <div class="col-sm-9 col-md-10"><input class="form-control" id="PlatIntroduce" maxlength="200" name="PlatIntroduce" type="text" value=""></div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="SimpleInfo">商家简介</label>
+                                <div class="col-sm-9 col-md-10"><textarea class="form-control" id="SimpleInfo" maxlength="1000" name="SimpleInfo" rows="3" style="max-width: 498px;"></textarea></div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div id="tab_2" class="tab-pane ">
+                    <form id="formEdit2" class="form-horizontal">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="SmsOperter">短信运营商</label>
+                                <div class="col-sm-9 col-md-10"><input class="form-control" id="SmsOperter" name="SmsOperter" type="text" value=""></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="SmsWebUrl">短信平台接口</label>
+                                <div class="col-sm-9 col-md-10"><input class="form-control" id="SmsWebUrl" name="SmsWebUrl" type="text" url="True" value=""></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="AppID">支付平台APPID</label>
+                                <div class="col-sm-9 col-md-10"><input class="form-control" id="AppID" name="AppID" type="text" value=""></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="APPSecret">支付平台APPSecret</label>
+                                <div class="col-sm-9 col-md-10"><input class="form-control" id="APPSecret" name="APPSecret" type="text" value=""></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="MerchNo">支付平台商户号</label>
+                                <div class="col-sm-9 col-md-10"><input class="form-control" id="MerchNo" name="MerchNo" type="text" value=""></div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-2 control-label " for="ProviceCode">所在省行政区号</label>
+                                <div class="col-sm-9 col-md-10"><input class="form-control" id="ProviceCode" name="ProviceCode" type="text" value=""></div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div id="tab_3" class="tab-pane padding-top-20 special ">
+                    <div class="col-md-2 text-right" style="padding-top:20px;">
+                        企业分组:
+                    </div>
+                    <div class="rolelist">
+                        <label>
+                            <input type="checkbox" value="39F0DBB16EB1D5199291AFD0C88012DC">
+                            <i>平台管理员</i><span></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="39F0DBB19A148AC842A51E481199E079">
+                            <i>平台财务</i><span></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="tab_4" class="tab-pane padding-top-20 special ">
+                    <div class="col-md-2 text-right" style="padding-top:20px;">
+                        企业售票岗位:
+                    </div>
+                    <div class="ticketlist">
+                        <label>
+                            <input type="checkbox" value="39F0DBB23D13E8F46767B48F7ABE1EFB">
+                            <i>雪乡售票员</i><span></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="39F0DBB281B62873A0CC1546BEC67CDA">
+                            <i>雪乡售票管理员</i><span></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="39F0DBB3535B50A9005890696B49B735">
+                            <i>原始林售票员</i><span></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="39F0DBB38FB83927342B55523A859433">
+                            <i>原始林售票管理员</i><span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-actions"><div class="row"><div class="col-md-offset-2 col-md-10">
+            <button type="button" id="" data-dismiss="modal" class="btn btn-default linkbutton cancelbtn">取消</button>
+            <button type="button" id="" onclick="saveCompany()" class="btn btn-success linkbutton">保存</button>
+        </div></div></div>
+    </div>
+
+</div>
+</body>
+
+
+
+<script>
+</script>
+
+
+</html>
