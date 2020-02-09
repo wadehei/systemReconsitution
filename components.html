@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./static/css/skin1/hj-content.css" />
 </head>
 
-<body class="overflow:auto">
+<body style="overflow:auto">
     <!--组件1，带有按钮的查询 input+button -->
     <div class="form-group d-flex">
         <input type="text" id="filter" class="form-control hj-w300" placeholder="请输入配置类型编码/名称" value="">
@@ -171,6 +171,24 @@
 
     <!--ztree组件-->
     <ul class="ztree" id="divTree"></ul>
+
+
+    <!--日历-->
+    <div class="form-group">
+        <label class="col-sm-3 col-md-2 control-label" >
+            游玩日期
+        </label>
+        <div class="col-sm-9 col-md-4">
+            <div class="input-group">
+                <input class="bs-datetime form-control" type="text" value="">
+                <span class="input-group-btn">
+                    <button class="btn-default btn" type="button">
+                        <span aria-hidden="true" class="fa-calendar fa"></span>
+                    </button>
+               </span>
+            </div>
+        </div>
+    </div>
 </body>
 
 <!--jquery-->
@@ -203,6 +221,14 @@
 
 
 
-
+<!--日历插件-->
+<link rel="stylesheet" href="./static/plugin/bootstrap-daterangepicker/daterangepicker.css">
+<link href="./static/plugin/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<link href="./static/plugin/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" />
+<script src="./static/plugin/bootstrap-daterangepicker/daterangepicker.js" ></script>
+<script src="./static/plugin/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" ></script>
+<script src="./static/plugin/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" ></script>
+<script src="./static/plugin/bootstrap-timepicker/js/bootstrap-timepicker.js" ></script>
+<script src="./static/js/hj-date.js"></script>
 
 </html>
