@@ -166,3 +166,32 @@ a:active {
     padding-bottom: 5px;
     padding-top: 8px;
 }
+
+
+
+/*内页按钮*/
+.cancelbtn{margin-left:5px;}
+.querybtn {margin-right:0px;}
+.queryspan{line-height:34px;vertical-align:text-bottom;}
+.pagination>.active>a, .pagination>.active>a:hover, .pagination>.active>a:focus, .pagination>.active>span, .pagination>.active>span:hover, .pagination>.active>span:focus{background-color:#1890ff;border-color:#1890ff;}
+.label-success { background-color: #1890ff; }
+.label-success[href]:hover, .label-success[href]:focus {  background-color: #1890ff; }
+.btn-primary {  border-color: #1890ff;  background-color: #1890ff;    }
+/*.portlet.light{padding-bottom:30px;}*/
+.bootstrap-table .table{border-bottom:none;}
+.portlet{height:auto;}
+.linkbutton{min-width:76px;}
+.directionbutton{width:60px;}
+.btn-success{border-color:#1890ff;background-color:#1890ff;color:#fff;height:34px;}
+.btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle{background-color:#1890ff}
+
+.btn-success:visited{border-color:#1890ff;background-color:#1890ff;color:#fff;}
+.btn-success:hover{border-color:#40a9ff;background-color:#40a9ff;color:#fff;}
+.btn-success:focus{border-color:#1890ff;background-color:#1890ff;color:#fff;}
+.btn-success:active{border-color:#1890ff !important;background-color:#1890ff !important;color:#fff;}
+.btn-success.active.focus,.btn-success.active:focus,.btn-success.active:hover,.btn-success:active.focus.btn-success:active:focus,.btn-success:active:hover,.open>.btn-success.dropdown-toggle.focus,.open>.btn-success.dropdown-toggle:focus,.open>.btn-success.dropdown-toggle:hover{border-color:#1890ff;background-color:#1890ff;color:#fff;}
+.btn.green:not(.btn-outline){border:#1890ff;background-color:#1890ff;color:#fff;}
+a{background-color:transparent;color:#1890ff;}
+a:hover{outline:0;text-decoration:none;cursor:pointer;transition:color .3s;}
+a:focus{outline:0;text-decoration:none;cursor:pointer;transition:color .3s;}
+a:active{outline:0;text-decoration:none;cursor:pointer;transition:color .3s;}
