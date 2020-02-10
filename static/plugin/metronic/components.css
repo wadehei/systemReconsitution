@@ -5380,7 +5380,7 @@ Chats
 Customized Bootstrap Close Icon 
 ***/
 .close {
-  display: inline-block;
+  /* display: inline-block;
   margin-top: 0px;
   margin-right: 0px;
   width: 9px;
@@ -5388,7 +5388,7 @@ Customized Bootstrap Close Icon
   background-repeat: no-repeat !important;
   text-indent: -10000px;
   outline: none;
-  background-image: url("../img/remove-icon-small.png") !important; }
+  background-image: url("../img/remove-icon-small.png") !important; } */
 
 /***
 Customized Bootstrap Dropdowns

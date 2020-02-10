@@ -1,5 +1,8 @@
 
 $(function () {
+    $(document).on('click','.addModal', function () {
+        $('#exampleModal').modal('show')
+    })
     var menuHtml = template("menuId", { menuList: menuList });
     // var menuHtml = template("menuId", { menuList: controllerList });
     $('.hj_menu_container').html(menuHtml);

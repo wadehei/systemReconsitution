@@ -30,6 +30,7 @@ r{
     overflow-x:hidden;
     background-color: #fff;
     padding-top: 0;
+    max-height: 500px;
 }
 .modal .overflow-y-auto{overflow-y:auto !important;overflow-x:hidden}
 .modal .overflow-y-auto+.form-actions{margin-top:0 !important}
