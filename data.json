@@ -1,45 +1,19 @@
 {
-  "rows":[
-    {
-      "id": 0,
-      "name": "Item 0",
-      "price": "$0"
-    },
-    {
-      "id": 1,
-      "name": "Item 1",
-      "price": "$1"
-    },
-    {
-      "id": 2,
-      "name": "Item 2",
-      "price": "$2"
-    },
-    {
-      "id": 3,
-      "name": "Item 3",
-      "price": "$3"
-    },
-    {
-      "id": 4,
-      "name": "Item 1",
-      "price": "$1"
-    },
-    {
-      "id": 5,
-      "name": "Item 1",
-      "price": "$1"
-    },
-    {
-      "id": 6,
-      "name": "Item 1",
-      "price": "$1"
-    },
-    {
-      "id": 7,
-      "name": "Item 1",
-      "price": "$1"
-    }
-  ],
-  "total":8
+  "success":true,
+  "data":{
+    "total": 1,
+    "data": [
+      {
+
+        "title1": "雪乡",
+        "title2": "XX01uUpanf",
+        "title3": "免费入园票(身份证)",
+        "title4": "",
+        "title5": "可写IC卡",
+        "title6": "",
+        "title7": 1,
+        "title8": "单票检票方案"
+      }
+    ]
+  }
 }

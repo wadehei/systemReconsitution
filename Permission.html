@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap/css/bootstrap.min.css"/>
+
+    <!-- 自定义字体图标 -->
+    <link rel="stylesheet" href="./static/fonts/hj-icon-1/hj-icon1.css"/>
+
+    <!-- fontAwesome字体图标库 -->
+    <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet"/>
+
+    <!-- 下拉选择 -->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-select/bootstrap-select.css"/>
+    <link rel="stylesheet" href="./static/plugin/bootstrap-dialog/css/bootstrap-dialog.css"/>
+
+    <!--表格插件样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-table/bootstrap-table.min.css"/>
+
+
+    <!-- 皮肤样式 -->
+    <!--头部导航样式-->
+    <link rel="stylesheet" href="./static/css/skin1/hj-top.css"/>
+    <!-- iframe样式 -->
+    <link rel="stylesheet" href="./static/css/skin1/hj-content.css"/>
+</head>
+
+<body class="overflow:auto">
+<div class="pagecontainer assign">
+    <div class="portlet light bordered hjcol-md-11  hjcol-sm-10">
+        <form role="form" class="form-inline clean-label-bold margin-top-8">
+            <input type="text" id="returnFormSubmitLeft" class="hide">
+            <div class="form-group queryspanContainer">
+                <span class="queryspan">待分配 [<span id="leftTotal">16</span>]</span>
+            </div>
+            <div class="text-left">
+                <input type="text" id="filterLeft" class="w300 form-control" placeholder="请输入员工账号/姓名">
+                <button type="button" id="" class="btn btn-success querybtn linkbutton" onclick="reloadTableLeft()">搜索
+                </button>
+            </div>
+            <label id="identifier" data-toggle="popover" data-content="要求不能多次点击" data-placement="bottom"
+                   data-original-title="" title="" class="pop nextHide">分配员工</label>
+        </form>
+        <div class="portlet-body  margin-top-10 ">
+            <div class="bootstrap-table">
+                <div class="fixed-table-toolbar"></div>
+                <div class="fixed-table-container" style="height: 406.8px; padding-bottom: 41px;">
+                    <div class="fixed-table-header" style="margin-right: 0px;">
+                        <table class="table table-striped table-advance table-hover" style="width: 522px;">
+                            <thead>
+                            <tr>
+                                <th class="bs-checkbox " style="width: 36px; " data-field="0">
+                                    <div class="th-inner "><input name="btSelectAll" type="checkbox"></div>
+                                    <div class="fht-cell" style="width: 36px;"></div>
+                                </th>
+                                <th style="" data-field="employeeCode">
+                                    <div class="th-inner ">员工账号</div>
+                                    <div class="fht-cell" style="width: 292px;"></div>
+                                </th>
+                                <th style="" data-field="employeeName">
+                                    <div class="th-inner ">员工姓名</div>
+                                    <div class="fht-cell" style="width: 193px;"></div>
+                                </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="fixed-table-body">
+                        <div class="fixed-table-loading" style="top: 41px; display: none;">正在努力地加载数据中，请稍候……</div>
+                        <table id="tabListLeft" class="table table-striped table-advance table-hover"
+                               style="margin-top: -40px;">
+                            <thead>
+                            <tr>
+                                <th class="bs-checkbox " style="width: 36px; " data-field="0">
+                                    <div class="th-inner "><input name="btSelectAll" type="checkbox"></div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                                <th style="" data-field="employeeCode">
+                                    <div class="th-inner ">员工账号</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                                <th style="" data-field="employeeName">
+                                    <div class="th-inner ">员工姓名</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr data-index="0">
+                                <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                                <td style="">zhangmingpu</td>
+                                <td style="">张明濮</td>
+                            </tr>
+                            <tr data-index="1">
+                                <td class="bs-checkbox "><input data-index="1" name="btSelectItem" type="checkbox"></td>
+                                <td style="">NXF</td>
+                                <td style="">宁晓峰</td>
+                            </tr>
+                            <tr data-index="2">
+                                <td class="bs-checkbox "><input data-index="2" name="btSelectItem" type="checkbox"></td>
+                                <td style="">ZXH</td>
+                                <td style="">张晓华</td>
+                            </tr>
+                            <tr data-index="3">
+                                <td class="bs-checkbox "><input data-index="3" name="btSelectItem" type="checkbox"></td>
+                                <td style="">ZL</td>
+                                <td style="">张磊</td>
+                            </tr>
+                            <tr data-index="4">
+                                <td class="bs-checkbox "><input data-index="4" name="btSelectItem" type="checkbox"></td>
+                                <td style="">LZC</td>
+                                <td style="">刘忠才</td>
+                            </tr>
+                            <tr data-index="5">
+                                <td class="bs-checkbox "><input data-index="5" name="btSelectItem" type="checkbox"></td>
+                                <td style="">LSB</td>
+                                <td style="">刘书宾</td>
+                            </tr>
+                            <tr data-index="6">
+                                <td class="bs-checkbox "><input data-index="6" name="btSelectItem" type="checkbox"></td>
+                                <td style="">LS</td>
+                                <td style="">李石</td>
+                            </tr>
+                            <tr data-index="7">
+                                <td class="bs-checkbox "><input data-index="7" name="btSelectItem" type="checkbox"></td>
+                                <td style="">SGY</td>
+                                <td style="">沈广义</td>
+                            </tr>
+                            <tr data-index="8">
+                                <td class="bs-checkbox "><input data-index="8" name="btSelectItem" type="checkbox"></td>
+                                <td style="">ZY</td>
+                                <td style="">张瑜</td>
+                            </tr>
+                            <tr data-index="9">
+                                <td class="bs-checkbox "><input data-index="9" name="btSelectItem" type="checkbox"></td>
+                                <td style="">WB</td>
+                                <td style="">王博</td>
+                            </tr>
+                            <tr data-index="10">
+                                <td class="bs-checkbox "><input data-index="10" name="btSelectItem" type="checkbox">
+                                </td>
+                                <td style="">LXY</td>
+                                <td style="">刘晓燕</td>
+                            </tr>
+                            <tr data-index="11">
+                                <td class="bs-checkbox "><input data-index="11" name="btSelectItem" type="checkbox">
+                                </td>
+                                <td style="">ZSY</td>
+                                <td style="">张瑞莹</td>
+                            </tr>
+                            <tr data-index="12">
+                                <td class="bs-checkbox "><input data-index="12" name="btSelectItem" type="checkbox">
+                                </td>
+                                <td style="">JSZ</td>
+                                <td style="">蒋淑芝</td>
+                            </tr>
+                            <tr data-index="13">
+                                <td class="bs-checkbox "><input data-index="13" name="btSelectItem" type="checkbox">
+                                </td>
+                                <td style="">ZMP</td>
+                                <td style="">张明璞</td>
+                            </tr>
+                            <tr data-index="14">
+                                <td class="bs-checkbox "><input data-index="14" name="btSelectItem" type="checkbox">
+                                </td>
+                                <td style="">XY</td>
+                                <td style="">熊研</td>
+                            </tr>
+                            <tr data-index="15">
+                                <td class="bs-checkbox "><input data-index="15" name="btSelectItem" type="checkbox">
+                                </td>
+                                <td style="">ZYY</td>
+                                <td style="">郑月英</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="fixed-table-footer" style="display: none;">
+                        <table>
+                            <tbody>
+                            <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="fixed-table-pagination" style="display: none;"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="hjcol-md-2  hjcol-sm-4 text-center">
+        <button type="button" id="" class="btn btn-success directionbutton" onclick="addEmp()">&gt;&gt;</button>
+        <button type="button" id="" class="btn btn-danger directionbutton margin-top-10" onclick="removeEmp()">
+            &lt;&lt;
+        </button>
+    </div>
+    <div class="portlet light bordered hjcol-sm-10 hjcol-md-11">
+        <form role="form" class="form-inline clean-label-bold margin-top-8">
+            <input type="text" id="returnFormSubmitLeft" class="hide">
+            <div class="form-group queryspanContainer">
+                <span class="queryspan">已分配 [<span id="lbTotal">2</span>]</span>
+            </div>
+            <div class="form-group text-left">
+                <input type="text" id="filterRight" class="w300 form-control" placeholder="请输入员工账号/姓名">
+                <button type="button" id="" class="btn btn-success querybtn linkbutton" onclick="reloadTableRight()">
+                    搜索
+                </button>
+            </div>
+
+        </form>
+
+        <div class="portlet-body margin-top-10">
+            <div class="bootstrap-table">
+                <div class="fixed-table-toolbar"></div>
+                <div class="fixed-table-container heightAuto" style="height: 95px; padding-bottom: 41px;">
+                    <div class="fixed-table-header" style="margin-right: 0px;">
+                        <table class="table table-striped table-advance table-hover" style="width: 525px;">
+                            <thead>
+                            <tr>
+                                <th class="bs-checkbox " style="width: 36px; " data-field="0">
+                                    <div class="th-inner "><input name="btSelectAll" type="checkbox"></div>
+                                    <div class="fht-cell" style="width: 36px;"></div>
+                                </th>
+                                <th style="" data-field="employeeCode">
+                                    <div class="th-inner ">员工账号</div>
+                                    <div class="fht-cell" style="width: 221px;"></div>
+                                </th>
+                                <th style="" data-field="employeeName">
+                                    <div class="th-inner ">员工姓名</div>
+                                    <div class="fht-cell" style="width: 265px;"></div>
+                                </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="fixed-table-body">
+                        <div class="fixed-table-loading" style="top: 41px; display: none;">正在努力地加载数据中，请稍候……</div>
+                        <table id="tabListRight" class="table table-striped table-advance table-hover"
+                               style="margin-top: -40px;">
+                            <thead>
+                            <tr>
+                                <th class="bs-checkbox " style="width: 36px; " data-field="0">
+                                    <div class="th-inner "><input name="btSelectAll" type="checkbox"></div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                                <th style="" data-field="employeeCode">
+                                    <div class="th-inner ">员工账号</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                                <th style="" data-field="employeeName">
+                                    <div class="th-inner ">员工姓名</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr data-index="0">
+                                <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                                <td style="">XXGLY</td>
+                                <td style="">雪乡管理员</td>
+                            </tr>
+                            <tr data-index="1">
+                                <td class="bs-checkbox "><input data-index="1" name="btSelectItem" type="checkbox"></td>
+                                <td style="">rjp</td>
+                                <td style="">任建鹏</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="fixed-table-footer" style="display: none;">
+                        <table>
+                            <tbody>
+                            <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="fixed-table-pagination" style="display: none;"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!--jquery-->
+<script src="./static/plugin/jquery/jquery-3.4.0.min.js "></script>
+<!--bootstrap核心js-->
+<!-- <script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.min.js "></script> -->
+<script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js "></script>
+<!--<script src="./static/plugin/bootstrap/js/bootstrap.min.js "></script>-->
+<script src="./static/plugin/bootstrap-modal/js/bootstrap-modal.js "></script>
+<!-- 多标签js -->
+<script src="./static/plugin/jquery.scrollbar/jquery.scrollbar.js "></script>
+<script src="./static/plugin/nth.tabs/js/nth.tabs.min.js "></script>
+
+<!--bootstrap-select插件-->
+<link href="./static/plugin/bootstrap-select/bootstrap-select.css "/>
+<script src="./static/plugin/bootstrap-select/bootstrap-select.js "></script>
+<script src="./static/js/hj-select.js "></script>
+
+<!-- 公共js -->
+<script src="./static/js/hj-common.js "></script>
+
+<!--表格插件-->
+<script src="./static/plugin/bootstrap-table/bootstrap-table.min.js "></script>
+<script src="./static/plugin/bootstrap-table/locale/bootstrap-table-zh-CN.js "></script>
+<script src="./static/plugin/bootstrap-table/bootstrap-table-default.js "></script>
+<script src="./static/js/hj-table.js "></script>
+
+
+
+<script src="./static/plugin/abp-web-resources/Abp/Framework/scripts/abp.js"></script>
+<script src="./static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js"></script>
+<script src="./static/plugin/bootbox/bootbox.js "></script>
+<script src="./static/plugin/bootstrap-select/bootstrap-select.js "></script>
+<script src="./static/plugin/bootstrap-select/defaults-zh_CN.js "></script>
+<script src="./static/plugin/bootstrap-dialog/js/bootstrap-dialog.js "></script>
+
+<script src="./hjly/permission.js"></script>
+
+
+</html>
