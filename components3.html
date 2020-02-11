@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap/css/bootstrap.min.css"/>
+
+    <!-- 自定义字体图标 -->
+    <link rel="stylesheet" href="./static/fonts/hj-icon-1/hj-icon1.css"/>
+
+    <!-- fontAwesome字体图标库 -->
+    <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet"/>
+
+    <!-- 下拉选择 -->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-select/bootstrap-select.css"/>
+    <link rel="stylesheet" href="./static/plugin/bootstrap-dialog/css/bootstrap-dialog.css"/>
+
+    <!--表格插件样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-table/bootstrap-table.min.css"/>
+
+
+    <!-- 皮肤样式 -->
+    <!--头部导航样式-->
+    <link rel="stylesheet" href="./static/css/skin1/hj-top.css"/>
+    <!-- iframe样式 -->
+    <link rel="stylesheet" href="./static/css/skin1/hj-content.css"/>
+</head>
+
+<body class="overflow:auto">
+<div class="portlet light portlet-fit portlet-form">
+    <div class="portlet-body">
+        <form id="formEdit" class="form-horizontal" action="/Sys/PlatCompany/Save" method="post"
+              novalidate="novalidate">
+            <div class="form-body">
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-2 control-label " for="CompanyName">企业名称</label>
+                    <div class="col-sm-9 col-md-4"><input class="form-control" id="CompanyName" maxlength="25"
+                                                          name="CompanyName" type="text" value="admin"></div>
+                    <label class="col-sm-3 col-md-2 control-label " for="CompanyCode">企业编码</label>
+                    <div class="col-sm-9 col-md-4"><input class="form-control" id="CompanyCode" name="CompanyCode"
+                                                          readonly="True" type="text" value="ADM"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-2 control-label " for="PlatName">登录页主标题</label>
+                    <div class="col-sm-9 col-md-4"><input class="form-control" id="PlatName" maxlength="50"
+                                                          name="PlatName" type="text" value="雪乡景区票务管理系统"></div>
+
+                    <label class="col-sm-3 col-md-2 control-label " for="PlatNameSecond">登录页副标题</label>
+                    <div class="col-sm-9 col-md-4"><input class="form-control" id="PlatNameSecond" maxlength="50"
+                                                          name="PlatNameSecond" type="text" value="中国雪乡"></div>
+                </div>
+
+                <div class="form-group">
+
+                    <label class="col-sm-3 col-md-2 control-label " for="LoginCSS">登录页CSS样式</label>
+                    <div class="col-sm-9 col-md-4"><input class="form-control" id="LoginCSS" maxlength="25"
+                                                          name="LoginCSS" type="text" value=""></div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-2 control-label " for="LoginImgs">登录页背景图</label>
+                    <div class="col-sm-9 col-md-4">
+                        <img src="/hjly/img/defaultUploadImg.png" style="border:none;width:100px;height:100px;" id="img"
+                             onclick="upClickImgs()" title="点击上传图片" onerror="this.src='/hjly/img/defaultUploadImg.png'">
+                        <span class="uploadImgText" style="position: absolute;top: 62px;left: 37px;">上传图片</span>
+                        <span style=" width: 45%; display: inline-block; vertical-align: middle; margin-left: 15px;font-size:12px;"> 仅支持jpg、jpeg、png格式图片，且文件小于2M，图片尺寸为1060*1080px</span>
+                        <input type="file" style="display:none;" id="filesImgs" name="files" multiple=""
+                               onchange="upLoadClickImgs(this)">
+                    </div>
+                    <label class="col-sm-3 col-md-2 control-label " for="LoginLogo">登录页Logo</label>
+                    <div class="col-sm-9 col-md-4">
+                        <img src="/hjly/img/defaultUploadImg.png" style="border:none;width:100px;height:100px;"
+                             id="logo" onclick="upClickLogo()" title="点击上传图片"
+                             onerror="this.src='/hjly/img/defaultUploadImg.png'">
+                        <span class="uploadImgText" style="position: absolute;top: 62px;left: 37px;">上传图片</span>
+                        <span style=" width: 45%; display: inline-block; vertical-align: middle; margin-left: 15px;font-size:12px;">仅支持png格式图片，且文件小于2M， 图片尺寸为60*60px</span>
+                        <input type="file" style="display:none;" id="filesLogo" name="files" multiple=""
+                               onchange="upLoadClickLogo(this)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-2 control-label " for="PlatIntroduce">登录页标题描述</label>
+                    <div class="col-sm-9 col-md-10"><input class="form-control" id="PlatIntroduce" maxlength="100"
+                                                           name="PlatIntroduce" type="text" value=""></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-2 control-label " for="DataDesc">描述</label>
+                    <div class="col-sm-9 col-md-10"><textarea class="form-control" id="DataDesc" maxlength="200"
+                                                              name="DataDesc" rows="3"></textarea></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-2 control-label " for="DataMemo">备注</label>
+                    <div class="col-sm-9 col-md-10"><textarea class="form-control" id="DataMemo" maxlength="200"
+                                                              name="DataMemo" rows="3"></textarea></div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="button" id="" onclick="save(this);" class="btn btn-success linkbutton">保存</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+<!--jquery-->
+<script src="./static/plugin/jquery/jquery-3.4.0.min.js "></script>
+<!--bootstrap核心js-->
+<script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js "></script>
+<script src="./static/plugin/bootstrap-modal/js/bootstrap-modal.js "></script>
+<!-- 多标签js -->
+<script src="./static/plugin/jquery.scrollbar/jquery.scrollbar.js "></script>
+<script src="./static/plugin/nth.tabs/js/nth.tabs.min.js "></script>
+
+<!--bootstrap-select插件-->
+<link href="./static/plugin/bootstrap-select/bootstrap-select.css "/>
+<script src="./static/plugin/bootstrap-select/bootstrap-select.js "></script>
+<script src="./static/js/hj-select.js "></script>
+
+<!-- 公共js -->
+<script src="./static/js/hj-common.js "></script>
+
+<!--表格插件-->
+<script src="./static/plugin/bootstrap-table/bootstrap-table.min.js "></script>
+<script src="./static/plugin/bootstrap-table/locale/bootstrap-table-zh-CN.js "></script>
+<script src="./static/plugin/bootstrap-table/bootstrap-table-default.js "></script>
+<script src="./static/js/hj-table.js "></script>
+
+
+
+<script src="./static/plugin/abp-web-resources/Abp/Framework/scripts/abp.js"></script>
+<script src="./static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js"></script>
+<script src="./static/plugin/bootbox/bootbox.js "></script>
+<script src="./static/plugin/bootstrap-select/bootstrap-select.js "></script>
+<script src="./static/plugin/bootstrap-select/defaults-zh_CN.js "></script>
+<script src="./static/plugin/bootstrap-dialog/js/bootstrap-dialog.js "></script>
+
+<script src="./hjly/permission.js"></script>
+
+
+</html>

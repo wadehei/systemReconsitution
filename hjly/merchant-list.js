@@ -5,11 +5,6 @@ var tab = $('#tabList').bootstrapTable({
         return getQuery(params);
     },
     onLoadSuccess: function(json) {
-        debugger
-        // if(json.success){
-        //
-        // }
-        // return json.data.rows;
 
     }
 });
