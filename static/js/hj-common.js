@@ -43,7 +43,31 @@ $(document).ready(function () {
     /**
      * 标准select
      */
-    $('.hj-select-picker').not('.hj-ignore').selectpicker();
+    $('.hj-select-picker').not('.hj-ignore').not(".init").each(function (i,data) {
+        var $this = $(data);
+        $this.not('.hj-ignore').selectpicker();
+        $this.addClass("init");
+    });
+
+
+
+    $('.modal form').find('input[type=text]').not(".init").each(function () {
+        var $this = $(this);
+        var maxLength = $this.attr('maxLength');
+        if (maxLength) {
+            $this.maxlength({
+                threshold: maxLength > 10 ? 10 : maxLength,
+                appendToParent:true
+            });
+        }
+        $this.addClass('init');
+    });
+    //启用禁用按钮
+    // $('input.hj-switch[type=checkbox]').not('.hj-ignore').not(".init").each(function (i,data) {
+    //     var $this = $(data);
+    //     $this.not('.hj-ignore').bootstrapSwitch();
+    //     $this.addClass("init");
+    // });
 });
 
 /**
@@ -56,7 +80,7 @@ var editButton = function (id, action, text) {
 };
 //通用删除按钮
 var delButton = function (id, action, text) {
-    return opButton(action ? action : 'del', id, text ? text : $.i18n.prop('cancel'));
+    return opButton(action ? action : 'del', id, text ? text : $.i18n.prop('delete'));
 };
 //普通操作列按钮
 var opButton = function (actionName, id, text) {
@@ -64,9 +88,7 @@ var opButton = function (actionName, id, text) {
 };
 //通用启用/禁用按钮
 var enableButton = function (id, val) {
-    //return '<a href="javascript:;" onclick="' + onclick + '" title="' + L('Delete') + '">' + L('Delete') + '</a>';
-    return '<input type="checkbox" data-id="' + id + '" class="make-switch" data-on-text="' + L('A101Enable') + '"  data-size="mini" data-off-text="' + L('A101Disable') + '"' + (val == 1 ? 'checked' : '') + '>';
-    //return '<input type="checkbox" data-id="' + id + '" class="make-switch" data-on-text="&nbsp;"  data-size="mini" data-off-text="&nbsp;"' + (val == 1 ? 'checked' : '') + '>';
+    return '<input type="checkbox" data-id="' + id + '" class="hj-switch make-switch" data-on-text="' + $.i18n.prop('enable') + '"  data-size="mini" data-off-text="' +$.i18n.prop('disable') + '"' + (val == 1 ? 'checked' : '') + '>';
 };
 
 //表格选中的行
@@ -78,6 +100,17 @@ function getSelect(tab) {
         return null;
     }
     return rows;
+}
+/**
+ *
+ * @param offset 从第几行开始
+ * @param limit  每页多少行数据
+ */
+function offsetToPage(params){
+    if(typeof params == "undefined"){
+        return 1;
+    }
+    return parseInt(params.offset/params.limit) + 1
 }
 
 /**
@@ -243,14 +276,12 @@ function openDialog(url, title, cssClass, callback) {
         async: false,
         dataType: "html"
     }).done(function (res) {
-        debugger
         try {
             var obj = JSON.parse(res);
             if (obj.__abp && obj.unAuthorizedRequest) {
                 location.href = obj.targetUrl;
             }
         } catch (e) {
-            debugger
 
             dialog = new BootstrapDialog({
                 title: "菜单",
@@ -370,6 +401,73 @@ function openDialog5(url, title) {
     return openDialog(url, title, 'dialog-1200');
 }
 
+
+var $form;
+function save(that) {
+    if ($form == undefined)
+        abp.notify.error($.i18n.prop('FormIDNotExist'));
+    //去掉必选输入框的空格
+    $form.find("r").parents(".form-group").find("input").each(function (i, input) {
+        var _input = $(input);
+        var value = $.trim(_input.val());
+        _input.val(value);
+    });
+    if (!$form.valid()) return;
+
+    var formData = $form.serializeFormToObject(); //serializeFormToObject is defined in main.js
+    abp.ajax({
+        url: $form.attr('action'),
+        data: JSON.stringify(formData)
+    }).done(function (json) {
+        success($.i18n.prop("save.success"));
+        abp.event.trigger('save');
+    }).fail(function (json) {
+        abp.notify.error(json.desc);
+    }).always(function () {
+
+    });
+}
+
 /**
  *----弹框end
  */
+
+/*
+ 全局按键控制
+ */
+
+$("#filterLeft").keypress(function (e) {
+    if (e.which == 13) {
+        if(typeof reloadTableLeft == "function"){
+            reloadTableLeft();
+        }
+    }
+});
+$("#filterRight").keypress(function (e) {
+    if (e.which == 13) {
+        if(typeof reloadTableRight == "function") {
+            reloadTableRight();
+        }
+    }
+});
+
+//全局popover控制
+$("#identifier").popover({html: true});
+
+
+$.fn.serializeFormToObject = function () {
+
+    //serialize to array
+    var data = $(this).serializeArray();
+
+    //add also disabled items
+    $(':disabled[name]', this).each(function () {
+        data.push({ name: this.name, value: $(this).val() });
+    });
+    //map to object
+    var obj = {};
+    data.map(function (x) {
+        obj[x.name] = x.value;
+    });
+    return obj;
+};

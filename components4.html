@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap/css/bootstrap.min.css"/>
+
+    <!-- 自定义字体图标 -->
+    <link rel="stylesheet" href="./static/fonts/hj-icon-1/hj-icon1.css"/>
+
+    <!-- fontAwesome字体图标库 -->
+    <link href="./static/fonts/font-awesome/font-awesome.css" rel="stylesheet"/>
+
+    <!-- 下拉选择 -->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-select/bootstrap-select.css"/>
+    <link rel="stylesheet" href="./static/plugin/bootstrap-dialog/css/bootstrap-dialog.css"/>
+
+    <!--表格插件样式-->
+    <link rel="stylesheet" href="./static/plugin/bootstrap-table/bootstrap-table.min.css"/>
+
+
+    <!-- 皮肤样式 -->
+    <!--头部导航样式-->
+    <link rel="stylesheet" href="./static/css/skin1/hj-top.css"/>
+    <!-- iframe样式 -->
+    <link rel="stylesheet" href="./static/css/skin1/hj-content.css"/>
+</head>
+
+<body style="overflow:auto">
+<div class="pagecontainer">
+    <div class="portlet light bordered">
+        <!-- 查询条件表单 -->
+        <form id="queryForm" role="form" class="form-query form-inline clean-label-bold margin-top-8">
+            <!-- 商家信息 -->
+            <div class="form-group d-flex form-check-inline">
+                <label class="control-label">商家信息</label>
+                <input name="merchantConditionGroup" type="text" id="" class="form-control hj-w300"
+                       th:attr="placeholder=#{basic_organization_merchant_listPage_conditionChannel_merchantInfo_tips}">
+            </div>
+
+            <!-- 商家状态 -->
+            <div class="form-group d-flex form-check-inline">
+                <label class="control-label">部门名称</label>
+                <select name="status" class="form-control hj-select-picker hj-w300">
+                    <option value="" th:text="#{message_select_all}"></option>
+                    <th:block th:each="entry : ${dataStatusMap}">
+                        <option th:attr="value=${entry.key}" th:text="#{${entry.value}}"></option>
+                    </th:block>
+                </select>
+            </div>
+
+            <button type="button " class="btn btn-success hj-query-btn"
+                    onclick="reloadTable()">搜索</button>
+        </form>
+
+        <!-- 按钮栏 -->
+        <hr class="hj-mb-0" />
+        <div class="portlet-title">
+            <div class=" caption ">
+                <button type="button " class="btn btn-success hj-query-btn"
+                        onclick="add()" th:text="#{message_add}">新增</button>
+                <button type="button " class="btn btn-danger" th:text="#{message_batch_delete}">批量删除</button>
+            </div>
+        </div>
+
+        <!-- 表格数据 -->
+        <div class="portlet-body">
+            <table id="tabList">
+                <thead>
+                <tr>
+                    <th data-checkbox="true"></th>
+                    <th data-field="menuName" th:text="#{basic_organization_merchant_listPage_dataChannel_merchantCode}">商品名称1</th>
+                    <th data-field="menuCode" th:text="#{basic_organization_merchant_listPage_dataChannel_merchantName}">商品名称1</th>
+                    <th data-field="gotoPageUrl" th:text="#{basic_organization_merchant_listPage_dataChannel_merchantType}">商品名称1</th>
+                    <th data-field="imageSrc" th:text="#{basic_organization_merchant_listPage_dataChannel_mnemonicCode}">商品名称1</th>
+                    <th data-formatter="dataSort" th:text="#{basic_organization_merchant_listPage_dataChannel_linkInfo}">商品名称1</th>
+                    <th data-field="dataDesc" th:text="#{basic_organization_merchant_listPage_dataChannel_linkMail}">商品名称1</th>
+                    <th data-field="id" data-formatter="fmtOperate" th:text="#{message_operate}">商品名称1</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+</div>
+</body>
+
+<!--jquery-->
+<script src="./static/plugin/jquery/jquery-3.4.0.min.js "></script>
+<script src="./static/plugin/jquery/jquery.i18n.properties-min-1.0.9.js "></script>
+<!--bootstrap核心js-->
+<script src="./static/plugin/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js "></script>
+<script src="./static/plugin/bootstrap-modal/js/bootstrap-modal.js "></script>
+<!-- 多标签js -->
+<script src="./static/plugin/jquery.scrollbar/jquery.scrollbar.js "></script>
+<script src="./static/plugin/nth.tabs/js/nth.tabs.min.js "></script>
+
+<!--bootstrap-select插件-->
+<link href="./static/plugin/bootstrap-select/bootstrap-select.css "/>
+<script src="./static/plugin/bootstrap-select/bootstrap-select.js "></script>
+<script src="./static/js/hj-select.js "></script>
+
+
+
+
+<!--ztree表格插件-->
+<link href="./static/plugin/bootstrap-table/extensions/treegrid/jquery-treegrid/jquery.treegrid.min.css" rel="stylesheet" />
+<script src="./static/plugin/bootstrap-table/bootstrap-table.min.js "></script>
+<script src="./static/plugin/bootstrap-table/bootstrap-table-locale-all.js"></script>
+<script src="./static/plugin/bootstrap-table/bootstrap-table-default.js "></script>
+<script src="./static/plugin/zTree_v3/js/jquery.ztree.core.min.js"></script>
+<script src="./static/plugin/bootstrap-table/extensions/treegrid/bootstrap-table-treegrid.js" ></script>
+<script src="./static/plugin/bootstrap-table/extensions/treegrid/jquery-treegrid/jquery.treegrid.js" ></script>
+<script src="./static/plugin/bootstrap-table/extensions/treegrid/jquery-treegrid/jquery.treegrid.default.js" ></script>
+
+
+<!--弹框公共的-->
+<script src="./static/plugin/abp-web-resources/Abp/Framework/scripts/abp.js"></script>
+<script src="./static/plugin/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js"></script>
+<script src="./static/plugin/bootbox/bootbox.js "></script>
+<script src="./static/plugin/bootstrap-select/bootstrap-select.js "></script>
+<script src="./static/plugin/bootstrap-select/defaults-zh_CN.js "></script>
+<script src="./static/plugin/bootstrap-dialog/js/bootstrap-dialog.js "></script>
+
+<!-- 公共js -->
+<script src="./static/js/hj-common.js "></script>
+
+<script src="./hjly/components4.js"></script>
+</html>

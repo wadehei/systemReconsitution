@@ -319,7 +319,6 @@ $(function() {
 
 
 function initTree() {
-    debugger
     var id = "";
     $.ajax({
         url: './static/json/ztree.json',
