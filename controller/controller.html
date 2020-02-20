@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="../static/plugin/bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+    <!-- 自定义字体图标 -->
+    <link rel="stylesheet" href="../static/fonts/hj-icon-1/hj-icon1.css" />
+    <!-- fontAwesome字体图标库 -->
+    <link href="../static/fonts/font-awesome/font-awesome.css" rel="stylesheet" asp-append-version="true" />
+    <!-- 多标签样式 -->
+    <!-- 皮肤样式 -->
+    <!--头部导航样式-->
+    <link rel="stylesheet" href="../static/css/skin1/hj-top.css" />
+    <link rel="stylesheet" href="../static/css/skin1/hj-content.css" />
+    <link rel="stylesheet" href="./controller.css">
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary open_controller">控制台</button>
+    <div class="controller_content">
+
+    </div>
+</body>
+<script id="menuIdOne" type="text/html">
+    {{each controllerList menuOne i}}
+    <% var type = 'inner' %>
+    {{if menuOne.newWindow == true }}
+        <% type = 'newWindow' %>
+    {{/if}}
+    {{if menuOne.request == true }}
+        <% type = 'request' %>
+    {{/if}}
+    <div class="menu_one">
+        <div class="menu_item" data-url="{{menuOne.url}}" data-leaf="{{menuOne.leaf}}" data-id="{{menuOne.id}}"
+             data-type="{{type}}" data-text="{{menuOne.name}}" data-bool="0" data-level="1"
+             data-index="{{i}}" data-length="10">
+            <img class="menu_icon" src="/component/hjly/img/icon/menu-icon.png" alt="">
+            <img class="menu_icon" src="/component/hjly/img/icon/menu-icon-on.png" alt="">
+            <p>
+                {{menuOne.name}}
+            </p>
+            {{if !menuOne.leaf}}
+                <img class="menu_arrows arrows_down" src="/component/hjly/img/icon/arrows.png" alt="">
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<!--bootstrap核心js-->
+<script src="../static/plugin/jquery/jquery-3.4.0.min.js"></script>
+<script src="../static/plugin/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="../static/plugin/art-template.js"></script>
+<script src="./controllerJson.js"></script>
+<script src="./controller.js"></script>
+<script>
+    $(document).on('click', '.open_controller', function () {
+        $(this).hj_controller();
+    });
+</script>
+
+</html>
