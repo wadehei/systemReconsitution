@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>权限表格</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--bootstrap样式-->
+    <link rel="stylesheet" href="../static/plugin/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./table.css">
+</head>
+
+<body>
+    <button type="button" onclick="submit()">提交</button>
+    <div class="content_box flex a_i_c f_d_c">
+        <!-- 
+        <div class="one_level flex a_i_c">
+            <div class="one_box">
+                <div class="ckbox">
+                    <input id="" name="" type="checkbox"><label for="">菜单1</label>
+                </div>
+            </div>
+            <div class="two_level flex a_i_c f_d_c">
+                <div class="two_box flex a_i_c">
+                    <div class="two">
+                        <div class="ckbox">
+                            <input id="" name="" type="checkbox"><label for="">菜单2</label>
+                        </div>
+                    </div>
+                    <div class="three_level flex a_i_c f_w_w">
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="two_box flex a_i_c">
+                    <div class="two">
+                        <div class="ckbox">
+                            <input id="" name="" type="checkbox"><label for="">菜单2</label>
+                        </div>
+                    </div>
+                    <div class="three_level flex a_i_c f_w_w">
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="two_box flex a_i_c">
+                    <div class="two">
+                        <div class="ckbox">
+                            <input id="" name="" type="checkbox"><label for="">菜单2</label>
+                        </div>
+                    </div>
+                    <div class="three_level flex a_i_c f_w_w">
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                        <div class="three flex a_i_c">
+                            <div class="ckbox">
+                                <input id="" name="" type="checkbox"><label for="">菜单3</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+<!--jquery checked="{{item.checked==true?true:false}}"-->
+<script src="../static/plugin/jquery/jquery-3.4.0.min.js "></script>
+<script src="../static/plugin/art-template.js"></script>
+<script id="test" type="text/html">
+    {{each listArr item}}
+    <div class="one_level flex a_i_c">
+        <div class="one_box"> 
+                <label class="ckbox" 
+                {{if item.checked == true}}data-bool="true"{{/if}}
+                {{if item.checked == false|| item.checked==null}}data-bool="false"{{/if}}
+                data-level="1" for="">
+                    <input id="" name="{{item.code}}" type="checkbox" {{if item.checked == true}}checked{{/if}} value="{{item.id}}">{{item.name}}
+                    <span></span>
+                </label>
+        </div>
+        {{if item.children && item.children.length>0}}
+        <div class="two_level flex a_i_c f_d_c">
+        {{each item.children itemTwo}}
+            <div class="two_box flex a_i_c">
+                <div class="two"> 
+                        <label class="ckbox" 
+                        {{if itemTwo.checked == true}}data-bool="true"{{/if}}
+                        {{if itemTwo.checked == false|| itemTwo.checked==null}}data-bool="false"{{/if}}
+                         data-level="2" for="">
+                            <input id="" name="{{itemTwo.code}}"
+                             {{if itemTwo.checked == true}}checked{{/if}} type="checkbox" value="{{itemTwo.id}}">{{itemTwo.name}}
+                            <span></span>
+                        </label>                     
+                </div>
+                <div class="three_level flex a_i_c f_w_w">
+                    {{if itemTwo.children && itemTwo.children.length>0}}
+                    {{each itemTwo.children itemThree}}
+                    <div class="three flex a_i_c"> 
+                        <label class="ckbox" 
+                        {{if itemThree.checked == true}}data-bool="true"{{/if}}
+                        {{if itemThree.checked == false|| itemThree.checked==null}}data-bool="false"{{/if}}
+                         data-level="3" for="">
+                            <input id="" name="{{itemThree.code}}" 
+                            {{if itemThree.checked}}checked{{/if}} type="checkbox" value="{{itemThree.id}}">{{itemThree.name}}
+                            <span></span>
+                        </label>
+                    </div>
+                    {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
+</script>
+<script src="./table_json.js"></script>
+<script src="./table.js"></script>
+
+</html>

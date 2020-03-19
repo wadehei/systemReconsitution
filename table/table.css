@@ -1,0 +1,151 @@
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.a_i_c {
+    align-items: center;
+}
+
+.f_d_c {
+    flex-direction: column;
+}
+
+.j_c_f_s {
+    justify-content: flex-start;
+}
+
+.f_w_w {
+    flex-wrap: wrap;
+}
+
+/* 复选框样式 */
+
+.ckbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    color: #12263f;
+    font-size: 14px;
+    padding-left: 22px;
+    padding-right: 12px;
+    font-weight: normal;
+}
+
+.ckbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    left: 2px;
+}
+
+.ckbox>input:checked~span {
+    background-color: #2c7be5;
+    border-color: #2c7be5;
+    display: block;
+}
+
+.ckbox span {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+}
+
+.ckbox span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.ckbox .all_check::after {
+    top: 2px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.ckbox .half_check::after {
+    top: 0;
+    border-width: 0 0 2px 0;
+    transform: rotate(0deg);
+}
+
+.content_box {
+    justify-content: flex-start;
+    width: 850px;
+    margin: 30px;
+}
+
+.one_level {
+    width: 100%;
+    border-width: 0.5px 0.5px 0 0.5px;
+    border-color: black;
+    border-style: solid;
+}
+
+.one_level:nth-last-of-type(1) {
+    border-width: 0.5px;
+}
+
+.one_box {
+    width: 15%;
+    padding: 10px;
+}
+
+.two_box {
+    width: 70%;
+}
+
+.two_level {
+    width: 85%;
+}
+
+.two {
+    width: 20%;
+    padding: 10px;
+}
+
+.two_box {
+    border-width: 0.5px 0 0 0.5px;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+}
+
+.one_level .two_level .two_box:nth-of-type(1) {
+    border-width: 0 0 0 0.5px;
+}
+
+.one_level .two_level .two_box .three_level {
+    border-width: 0 0 0 0.5px;
+}
+
+.three_level {
+    width: 80%;
+    border-width: 0.5px 0 0 0.5px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+}
+
+.three {
+    width: 33.3%;
+    height: 30px;
+}
